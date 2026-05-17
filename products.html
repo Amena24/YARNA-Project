@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch &amp; Soul | Crochet Studio Products</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Literata:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#faffe9",
+                    "tertiary": "#54603f",
+                    "error": "#ba1a1a",
+                    "tertiary-container": "#6c7956",
+                    "on-primary-fixed-variant": "#703718",
+                    "surface": "#fbf9f4",
+                    "secondary": "#7d525f",
+                    "surface-container": "#f0eee9",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#3f4b2c",
+                    "outline-variant": "#d8c2b9",
+                    "tertiary-fixed-dim": "#becca3",
+                    "primary-fixed": "#ffdbcb",
+                    "on-background": "#1b1c19",
+                    "secondary-fixed-dim": "#eeb8c7",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f5f3ee",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#30312e",
+                    "on-surface": "#1b1c19",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#fffbff",
+                    "on-secondary-fixed-variant": "#623b47",
+                    "primary-fixed-dim": "#ffb693",
+                    "primary": "#8a4b2a",
+                    "primary-container": "#a86340",
+                    "on-primary": "#ffffff",
+                    "outline": "#86736b",
+                    "on-surface-variant": "#53433c",
+                    "on-tertiary-fixed": "#141f05",
+                    "secondary-fixed": "#ffd9e2",
+                    "surface-container-highest": "#e4e2dd",
+                    "surface-dim": "#dbdad5",
+                    "on-secondary-fixed": "#30111c",
+                    "secondary-container": "#fdc6d4",
+                    "inverse-primary": "#ffb693",
+                    "on-primary-fixed": "#341000",
+                    "surface-bright": "#fbf9f4",
+                    "tertiary-fixed": "#dae8be",
+                    "on-secondary-container": "#7a505c",
+                    "surface-container-high": "#eae8e3",
+                    "surface-tint": "#8d4e2d",
+                    "on-error-container": "#93000a",
+                    "background": "#fbf9f4",
+                    "surface-variant": "#e4e2dd",
+                    "inverse-on-surface": "#f2f1ec"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "section-gap": "80px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "40px",
+                    "gutter": "24px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "display-lg": ["Literata"],
+                    "headline-lg": ["Literata"],
+                    "headline-lg-mobile": ["Literata"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-md": ["Literata"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-shadow {
+            box-shadow: 0 10px 30px -10px rgba(138, 75, 42, 0.08);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px) scale(1.01);
+            box-shadow: 0 20px 40px -15px rgba(138, 75, 42, 0.12);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+<main class="pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Hero & Category Header -->
+<div class="mb-12">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Curated Supplies</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8">Premium threads and precision tools chosen for the modern fiber artist. Each item is tested in our studio for quality and soul.</p>
+<!-- Category Tabs -->
+<div class="flex space-x-4 border-b border-surface-container-highest">
+<button class="pb-4 font-label-md text-label-md text-primary border-b-2 border-primary transition-all px-2">Crochet Threads</button>
+<button class="pb-4 font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all px-2">Crochet Needles</button>
+<button class="pb-4 font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all px-2">Pattern Kits</button>
+</div>
+</div>
+<!-- Filters & Sorting -->
+<div class="flex flex-wrap items-center justify-between gap-4 mb-10">
+<div class="flex items-center gap-3">
+<span class="font-label-md text-label-md text-on-surface-variant">Filter by:</span>
+<div class="flex gap-2">
+<span class="px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm border border-outline-variant cursor-pointer hover:bg-secondary-container hover:text-on-secondary-container transition-colors">Cotton</span>
+<span class="px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm border border-outline-variant cursor-pointer hover:bg-secondary-container hover:text-on-secondary-container transition-colors">Silk Blend</span>
+<span class="px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm border border-outline-variant cursor-pointer hover:bg-secondary-container hover:text-on-secondary-container transition-colors">Organic</span>
+</div>
+</div>
+<select class="bg-surface-container border-none rounded-xl font-label-md text-label-md px-6 py-2 focus:ring-2 focus:ring-tertiary-fixed transition-all text-on-surface-variant">
+<option>Sort by: Newest</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Popularity</option>
+</select>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Thread Card 1 -->
+<div class="bg-white rounded-[24px] p-4 soft-shadow card-hover transition-all duration-300 flex flex-col border border-surface-container">
+<div class="relative rounded-[20px] overflow-hidden mb-4 aspect-[4/5] bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="A macro close-up of a high-quality terracotta-colored crochet thread spool with visible organic cotton fibers. The lighting is warm and golden, casting soft shadows on a clean cream background to emphasize the tactile texture. The aesthetic is modern yet artisanal, matching a sophisticated fiber arts studio palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWIwTk9Opydkr90EFRzQG8UteOWGqdJ4Yk9IivrCtlNfl8j9_0d_-lCewtleBJIXWsQ3a-Sq_b7UnljK2V_swLkNHOjbza1_4Xj-ag1UR6p6toOLEteiXaHHnrk3tCBTETIEXeiyhJDh_rhSZDdQn5Z776Bz_lQBZlVeEW-XtZn_XoSviEQfcJbyljjIGwic8t49Wd78nsz0rhHdCEPnM2FVcz5kWZZTIigqINEgy7awTKTyia-fdr2iibNnERaJ9URzDdt7vYJMw"/>
+<span class="absolute top-4 left-4 bg-primary text-white font-label-sm text-label-sm px-3 py-1 rounded-full">New Arrival</span>
+</div>
+<div class="px-2 flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface">Artisan Bloom Cotton</h3>
+<span class="font-headline-md text-headline-md text-primary">$18.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Ultra-soft GOTS certified organic cotton thread with a natural satin sheen.</p>
+<div class="flex gap-2 mb-6">
+<div class="w-6 h-6 rounded-full ring-2 ring-primary ring-offset-2 bg-[#8a4b2a] cursor-pointer"></div>
+<div class="w-6 h-6 rounded-full bg-[#7d525f] cursor-pointer hover:scale-110 transition-transform"></div>
+<div class="w-6 h-6 rounded-full bg-[#54603f] cursor-pointer hover:scale-110 transition-transform"></div>
+<div class="w-6 h-6 rounded-full bg-[#becca3] cursor-pointer hover:scale-110 transition-transform"></div>
+</div>
+</div>
+<div class="px-2 pb-2 flex items-center justify-between gap-4">
+<div class="flex items-center bg-surface-container rounded-full px-3 py-1 border border-outline-variant">
+<button class="p-1 hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">remove</span></button>
+<span class="mx-4 font-label-md text-label-md">1</span>
+<button class="p-1 hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">add</span></button>
+</div>
+<button class="flex-grow bg-primary text-white font-label-md text-label-md py-3 px-6 rounded-full hover:bg-primary-container transition-all flex items-center justify-center gap-2 active:scale-95">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+                        Add to Cart
+                    </button>
+</div>
+</div>
+<!-- Needle Card 1 -->
+<div class="bg-white rounded-[24px] p-4 soft-shadow card-hover transition-all duration-300 flex flex-col border border-surface-container">
+<div class="relative rounded-[20px] overflow-hidden mb-4 aspect-[4/5] bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="An elegant ergonomic crochet needle with a sage green handle resting on a linen fabric surface. The scene is lit with diffuse morning light creating a peaceful, creative atmosphere. The tool features a high-polished aluminum hook, reflecting the warm neutral tones of the surrounding studio environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7RbsEMwOCQdsx4P-Argx1RWplxi0zemwaGzcRQlgyaacEoKQtbZDi44re5t0Lv9I7HYKHD2YiuZ-28ZOguPojQmTesYqBblOo_TkbN0H44pdyYOC1o7R7tVfxf4xtgr7JmaZKtLJEC3tfJiZ8Sr146y45BkvqUwxCs10WAGT1gP2YpgUkRO_kRBwOvZNm0Eho8Us49T-a3B-ZSbsprZf5t5Rmjnczxilk9ASYcbmSkRBK5rThqlXlk3MkjrcCLNV5Kjz_YXJRrfs"/>
+</div>
+<div class="px-2 flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface">Ergo-Grip Aluminum</h3>
+<span class="font-headline-md text-headline-md text-primary">$12.50</span>
+</div>
+<div class="mb-3">
+<span class="font-label-md text-label-md text-secondary bg-secondary-fixed px-2 py-0.5 rounded">Size: 4.0mm</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Designed for comfort during long crochet sessions. Smooth gliding action on all yarn types.</p>
+</div>
+<div class="px-2 pb-2 flex items-center justify-between gap-4">
+<div class="flex items-center bg-surface-container rounded-full px-3 py-1 border border-outline-variant">
+<button class="p-1 hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">remove</span></button>
+<span class="mx-4 font-label-md text-label-md">1</span>
+<button class="p-1 hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">add</span></button>
+</div>
+<button class="flex-grow bg-primary text-white font-label-md text-label-md py-3 px-6 rounded-full hover:bg-primary-container transition-all flex items-center justify-center gap-2 active:scale-95">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+                        Add to Cart
+                    </button>
+</div>
+</div>
+<!-- Thread Card 2 -->
+<div class="bg-white rounded-[24px] p-4 soft-shadow card-hover transition-all duration-300 flex flex-col border border-surface-container">
+<div class="relative rounded-[20px] overflow-hidden mb-4 aspect-[4/5] bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="A collection of dusty rose and mauve silk blend crochet threads arranged artistically on a wooden table. Soft shadows from a nearby window create a depth and tactile quality to the threads. The lighting is low-key and moody, focusing on the shimmering texture of the silk fibers against the matte cotton core." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOSHzQXRu_GGXBQoUPYZcdv3-zSs1PujeGtHFAclN4hV3g9yIw-8im4LPXTaIA4dhNPA_OvETbrQGziSWi0wEavyrqiKBgmNSyAAXrVNo8qb7UytlYhNVGfIf-P2_pP-e0zeMyFI66r6DAt0IjMbyo07sue79qHRZYOGqcvY8FKF5VkNGGY27t7QbgeBdRnvdAFY08_NvFGj1PZYgJx96QIGzr_OtxINeFMPjT8FlN2QIMGLDtUwJ0vlnSh2pP0p0vYYJZKpGKsHY"/>
+</div>
+<div class="px-2 flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface">Silk Whisper Blend</h3>
+<span class="font-headline-md text-headline-md text-primary">$24.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Luxe 20% silk, 80% bamboo blend. Perfect for delicate shawls and accessories.</p>
+<div class="flex gap-2 mb-6">
+<div class="w-6 h-6 rounded-full ring-2 ring-primary ring-offset-2 bg-[#eeb8c7] cursor-pointer"></div>
+<div class="w-6 h-6 rounded-full bg-[#fbf9f4] border border-outline-variant cursor-pointer hover:scale-110 transition-transform"></div>
+<div class="w-6 h-6 rounded-full bg-[#7d525f] cursor-pointer hover:scale-110 transition-transform"></div>
+</div>
+</div>
+<div class="px-2 pb-2 flex items-center justify-between gap-4">
+<div class="flex items-center bg-surface-container rounded-full px-3 py-1 border border-outline-variant">
+<button class="p-1 hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">remove</span></button>
+<span class="mx-4 font-label-md text-label-md">1</span>
+<button class="p-1 hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">add</span></button>
+</div>
+<button class="flex-grow bg-primary text-white font-label-md text-label-md py-3 px-6 rounded-full hover:bg-primary-container transition-all flex items-center justify-center gap-2 active:scale-95">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+                        Add to Cart
+                    </button>
+</div>
+</div>
+<!-- Needle Card 2 -->
+<div class="bg-white rounded-[24px] p-4 soft-shadow card-hover transition-all duration-300 flex flex-col border border-surface-container">
+<div class="relative rounded-[20px] overflow-hidden mb-4 aspect-[4/5] bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Handcrafted bamboo crochet needles neatly organized on a warm-toned neutral textile. The lighting is soft and ambient, highlighting the natural grain of the wood and the smooth finish of the tools. The composition is minimalist and clean, reflecting a professional yet organic studio vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-T7t8i1OThvPfKKamwYylNXZX6s80A6IJkwp0UfR2mZTeMy-KgQE2YDfpnoF6NmV_kSzo1RJ1cIL36Z0eZOh5ek6w66Kax-eARBowqk7c6Gr5OjHTwDLqtRtMVn_Et23xr4sVP8OE2r1suhvBrNFI8JrWiVAy4yrtPPASHTtjvv5rnwBOnBNO9RbhJsN6XtITT-V5E9YvlIaChdkMWcO79YUv5dZ9Vfp5TKxk0aZp9424LZlERpDSxkPu1mF9Dr0PejFHHRTWvZY"/>
+</div>
+<div class="px-2 flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface">Hand-Carved Bamboo</h3>
+<span class="font-headline-md text-headline-md text-primary">$15.00</span>
+</div>
+<div class="mb-3">
+<span class="font-label-md text-label-md text-secondary bg-secondary-fixed px-2 py-0.5 rounded">Size: 5.5mm</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Sustainable bamboo needles with a warm touch. The favorite of traditional crafters.</p>
+</div>
+<div class="px-2 pb-2 flex items-center justify-between gap-4">
+<div class="flex items-center bg-surface-container rounded-full px-3 py-1 border border-outline-variant">
+<button class="p-1 hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">remove</span></button>
+<span class="mx-4 font-label-md text-label-md">1</span>
+<button class="p-1 hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">add</span></button>
+</div>
+<button class="flex-grow bg-primary text-white font-label-md text-label-md py-3 px-6 rounded-full hover:bg-primary-container transition-all flex items-center justify-center gap-2 active:scale-95">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+                        Add to Cart
+                    </button>
+</div>
+</div>
+<!-- Thread Card 3 -->
+<div class="bg-white rounded-[24px] p-4 soft-shadow card-hover transition-all duration-300 flex flex-col border border-surface-container">
+<div class="relative rounded-[20px] overflow-hidden mb-4 aspect-[4/5] bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Skeins of natural undyed wool yarn with subtle flecks of sage green and grey, placed in a woven basket. The setting is a bright, sun-drenched studio with minimalist furniture. The photo captures the soft, inviting texture of the yarn, emphasizing its sustainable and organic origins through clean, airy lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm1kJlYjbAq7sRAzFaylsLIT9FmKiv7xboIc0ftU-4D4TEM6iEWZ5RQuODdKRdbcFDg_ckj3c5AAr6lic6a4eCx6KeOkGsMAbOVsl_mEd_ZD9oII9AVqplRAjkHEiKHG_BMvV5MunlRS8BDTN5ioqJ3mAmANupGNqASRHNMXABEQ1WFWuy3Stp8PyogZuHdDS8KMkXvz7BKnmz2qybS9qd_QW8qoCCih-u-34tQcT8LLc-G0nQUAb3pSY_5eacXWCOcnZRlhWNRBs"/>
+</div>
+<div class="px-2 flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface">Sage Meadow Linen</h3>
+<span class="font-headline-md text-headline-md text-primary">$16.50</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Crisp, cool linen and cotton mix. Excellent stitch definition for summer patterns.</p>
+<div class="flex gap-2 mb-6">
+<div class="w-6 h-6 rounded-full ring-2 ring-primary ring-offset-2 bg-[#dae8be] cursor-pointer"></div>
+<div class="w-6 h-6 rounded-full bg-[#becca3] cursor-pointer hover:scale-110 transition-transform"></div>
+</div>
+</div>
+<div class="px-2 pb-2 flex items-center justify-between gap-4">
+<div class="flex items-center bg-surface-container rounded-full px-3 py-1 border border-outline-variant">
+<button class="p-1 hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">remove</span></button>
+<span class="mx-4 font-label-md text-label-md">1</span>
+<button class="p-1 hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">add</span></button>
+</div>
+<button class="flex-grow bg-primary text-white font-label-md text-label-md py-3 px-6 rounded-full hover:bg-primary-container transition-all flex items-center justify-center gap-2 active:scale-95">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+                        Add to Cart
+                    </button>
+</div>
+</div>
+<!-- Needle Card 3 -->
+<div class="bg-white rounded-[24px] p-4 soft-shadow card-hover transition-all duration-300 flex flex-col border border-surface-container">
+<div class="relative rounded-[20px] overflow-hidden mb-4 aspect-[4/5] bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Set of professional-grade stainless steel crochet needles with refined pointed tips, lying on a dark charcoal surface for high contrast. The metal surfaces have a soft matte finish to prevent glare. The lighting is focused and directional, highlighting the precision-engineered tips and the high-end quality of the tools." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxrixXPVuxeU5wptIMRCtHje0zfg6WsW84hF33mgOm8CTUmqAO0Xbb4ijkzDqvUrt84KiU0AJ3XD96PZExkOr5D09oL69FKfmhC3XDs6re5W-5j4i4em802Lz8015Z6b5fMrpu6IW_SPJyHmckI4VX4Hxs-m7q5U70lkmeAkhXjD_2rXwu_RnclK6yKn-XynrHHv75oQcRwsHP47s7CxMEFtf5jJhDP3nzo1Sn9dkG9sKc5SKGfX3r2ygDWKC-ovhnaFJtpT9Z49M"/>
+<span class="absolute top-4 right-4 bg-tertiary text-white font-label-sm text-label-sm px-3 py-1 rounded-full">Pro Series</span>
+</div>
+<div class="px-2 flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface">Precision Steel Hook</h3>
+<span class="font-headline-md text-headline-md text-primary">$19.00</span>
+</div>
+<div class="mb-3">
+<span class="font-label-md text-label-md text-secondary bg-secondary-fixed px-2 py-0.5 rounded">Size: 2.25mm</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Masterfully engineered for intricate lace work. Perfectly tapered for high accuracy.</p>
+</div>
+<div class="px-2 pb-2 flex items-center justify-between gap-4">
+<div class="flex items-center bg-surface-container rounded-full px-3 py-1 border border-outline-variant">
+<button class="p-1 hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">remove</span></button>
+<span class="mx-4 font-label-md text-label-md">1</span>
+<button class="p-1 hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">add</span></button>
+</div>
+<button class="flex-grow bg-primary text-white font-label-md text-label-md py-3 px-6 rounded-full hover:bg-primary-container transition-all flex items-center justify-center gap-2 active:scale-95">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+                        Add to Cart
+                    </button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-section-gap flex justify-center items-center gap-4">
+<button class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 rounded-full bg-primary text-white font-label-md text-label-md">1</button>
+<button class="w-10 h-10 rounded-full hover:bg-surface-container transition-colors font-label-md text-label-md text-on-surface-variant">2</button>
+<button class="w-10 h-10 rounded-full hover:bg-surface-container transition-colors font-label-md text-label-md text-on-surface-variant">3</button>
+</div>
+<button class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</main>
+
+</body></html>
