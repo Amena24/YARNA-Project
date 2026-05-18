@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Literata:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#faffe9",
+                    "tertiary": "#54603f",
+                    "error": "#ba1a1a",
+                    "tertiary-container": "#6c7956",
+                    "on-primary-fixed-variant": "#703718",
+                    "surface": "#fbf9f4",
+                    "secondary": "#7d525f",
+                    "surface-container": "#f0eee9",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#3f4b2c",
+                    "outline-variant": "#d8c2b9",
+                    "tertiary-fixed-dim": "#becca3",
+                    "primary-fixed": "#ffdbcb",
+                    "on-background": "#1b1c19",
+                    "secondary-fixed-dim": "#eeb8c7",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f5f3ee",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#30312e",
+                    "on-surface": "#1b1c19",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#fffbff",
+                    "on-secondary-fixed-variant": "#623b47",
+                    "primary-fixed-dim": "#ffb693",
+                    "primary": "#8a4b2a",
+                    "primary-container": "#a86340",
+                    "on-primary": "#ffffff",
+                    "outline": "#86736b",
+                    "on-surface-variant": "#53433c",
+                    "on-tertiary-fixed": "#141f05",
+                    "secondary-fixed": "#ffd9e2",
+                    "surface-container-highest": "#e4e2dd",
+                    "surface-dim": "#dbdad5",
+                    "on-secondary-fixed": "#30111c",
+                    "secondary-container": "#fdc6d4",
+                    "inverse-primary": "#ffb693",
+                    "on-primary-fixed": "#341000",
+                    "surface-bright": "#fbf9f4",
+                    "tertiary-fixed": "#dae8be",
+                    "on-secondary-container": "#7a505c",
+                    "surface-container-high": "#eae8e3",
+                    "surface-tint": "#8d4e2d",
+                    "on-error-container": "#93000a",
+                    "background": "#fbf9f4",
+                    "surface-variant": "#e4e2dd",
+                    "inverse-on-surface": "#f2f1ec"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "section-gap": "80px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "40px",
+                    "gutter": "24px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "display-lg": ["Literata"],
+                    "headline-lg": ["Literata"],
+                    "headline-lg-mobile": ["Literata"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-md": ["Literata"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .texture-bg {
+            background-image: radial-gradient(circle at 2px 2px, rgba(138, 75, 42, 0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background texture-bg selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface-dim/90 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="font-display-lg text-display-lg text-primary dark:text-primary-fixed-dim tracking-tight">Stitch &amp; Soul</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Products</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Cart</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:scale-105 transition-transform duration-300 p-2 text-primary">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="hover:scale-105 transition-transform duration-300 p-2 text-primary relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-secondary rounded-full"></span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant">
+<img alt="Customer profile" data-alt="A close-up studio portrait of a woman with a kind expression, wearing a hand-crocheted scarf in earthy tones. The lighting is soft and golden, highlighting the fine texture of the yarn and the natural warmth of the scene. The background is a blurred studio setting with soft cream colors, maintaining a sophisticated and high-end aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDobA0e1EtFCWENRUHButnNAMoYYsTl5R4NTGhBxwTRqiK1nrU37pKS-3TpOD3SsT8CLapmzJYjVT33nfzwYXrSAS-1dI3s8tOJXRHTxgyVO_JFly_WsDAYyaZ4TfAwXjG873vsViRLEVPlQEE9M3yYW4zYzpVkpEbG-HZLoe75xUK_0PP2KdgiQt4rRp3k7-aFeeIuo-25YL8IYYjQL-3xYbNLRv_LSsz62HHqzvJNaJkyMsRvLoOacqj3y-QRYj0SNzrLzQyegaw"/>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[870px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A wide-angle lifestyle shot of a brightly lit, modern crochet studio. The scene features overflowing baskets of premium cotton yarn in a palette of terracotta, sage green, and dusty rose. A beautiful, half-finished crochet project rests on a light oak table next to a steaming cup of tea. Sunlight streams through large windows, creating soft shadows and a peaceful, creative atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI5tTS0b7o5ASNY2iCF4UePw0LpD5w50eMz41ntOOtLeny5C4Im6ZpAIPDU7emh4isw7CnQW-NcMTEm-5vkOU7hAfixel6Umwz5aFt5xpiGTlbpLtcAr8b_rYlqnEbq8NfqHBJK46bnRqIxTJ_vWSsOyrulw7cphLh3A3TgIU0Puhjh6462Yl4-h6sLrKi5bqMsEZWjY1kOdx7ObxeQfAgXnUk0-tv7a9ghcWv5mjPgaVpfN3MBy5eFlOd6Op8r6NiiStU5l0QZd4"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface/80 via-surface/40 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-2xl">
+<span class="font-label-md text-label-md text-secondary tracking-widest uppercase mb-4 block">Premium Fiber Arts</span>
+<h1 class="font-display-lg text-display-lg md:text-[64px] text-on-surface leading-tight mb-6">Handcrafted Creativity Starts Here</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-lg">Discover our curated collection of artisanal threads, ergonomic hooks, and exclusive patterns designed for the soulful maker.</p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary font-label-md text-label-md px-10 py-4 rounded-full shadow-lg hover:scale-105 active:scale-95 transition-all duration-300">Shop Products</button>
+<button class="border-2 border-secondary text-secondary font-label-md text-label-md px-10 py-4 rounded-full hover:bg-secondary/5 transition-all">Explore Patterns</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us - Bento Grid -->
+<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">The Stitch &amp; Soul Experience</h2>
+<div class="h-1 w-20 bg-primary-fixed-dim mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="md:col-span-2 bg-surface-container-low p-10 rounded-[40px] flex flex-col justify-between border border-outline-variant/30 hover:shadow-lg transition-all duration-300 group">
+<div>
+<div class="w-14 h-14 bg-primary-container text-on-primary-container rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">verified</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Artisanal Quality</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">We source only the finest organic cotton and ethically produced wool from local family-owned mills.</p>
+</div>
+<div class="mt-8 flex items-center text-primary font-label-md text-label-md gap-2">
+                        View sourcing report <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<div class="bg-tertiary-fixed p-10 rounded-[40px] flex flex-col border border-tertiary/10 hover:shadow-lg transition-all duration-300">
+<div class="w-14 h-14 bg-tertiary-container text-on-tertiary-container rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">local_shipping</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-tertiary-fixed mb-4">Global Shipping</h3>
+<p class="font-body-md text-body-md text-on-tertiary-fixed-variant">Sustainable packaging and carbon-neutral delivery to your doorstep.</p>
+</div>
+<div class="bg-secondary-fixed p-10 rounded-[40px] flex flex-col border border-secondary/10 hover:shadow-lg transition-all duration-300">
+<div class="w-14 h-14 bg-secondary text-on-secondary rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">payments</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-secondary-fixed mb-4">Fair Price</h3>
+<p class="font-body-md text-body-md text-on-secondary-fixed-variant">Direct-to-maker pricing that supports both the artisan and your hobby.</p>
+</div>
+</div>
+</section>
+<!-- Best Sellers -->
+<section class="py-section-gap bg-surface-container/50">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Best Sellers</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">The most loved fibers by our community of makers.</p>
+</div>
+<a class="text-primary font-label-md text-label-md border-b border-primary/30 pb-1" href="#">Shop all products</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<div class="bg-white rounded-[32px] overflow-hidden border border-outline-variant/30 hover:shadow-xl transition-all duration-500 group">
+<div class="relative h-72 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A macro close-up of a luxurious skein of terracotta-colored organic cotton yarn. The intricate fibers and soft twist of the thread are clearly visible under soft, directional lighting. The background is a neutral, warm cream tone, emphasizing the rich color and tactile quality of the textile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_nfOGtPQBsb3gXhmxDiz92-JohhzkVHQ-eQMxpM3hUO00reHcY9EF_09HXWRCKtCSSlPaNDDm276enKNT80CCe04xZlcgmXAbVojVzvdg_NlEHikFVXeSyErG8iLoh9iCDOr703Z_0k2wShrEtb_q13yv0B5jlBSwC3DaaT1Agmuzr3IABvbEObHdathgPzrKExnz136vponCFyJeqVVncb7XIwXI-A6sAtILx7eSU6YUq3LXqYJM-cc99Q1Rvc3wE9Rm9PNGcoY"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-3 py-1 rounded-full">Bestseller</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-[18px] text-on-surface">Sunset Organic Cotton</h3>
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm">4.9</span>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-4">50g • Sport Weight</p>
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md text-primary">$12.50</span>
+<button class="w-10 h-10 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center hover:scale-110 transition-all active:scale-95">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-white rounded-[32px] overflow-hidden border border-outline-variant/30 hover:shadow-xl transition-all duration-500 group">
+<div class="relative h-72 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A set of elegant, ergonomic crochet hooks with rose-gold metallic tips and soft-touch sage green handles. They are arranged neatly on a textured linen surface next to a small wooden bowl of ivory yarn. The lighting is bright and clean, showcasing the premium finish and modern design of the tools." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDjEwlVxD894xNZzpRCCsZhdUgid8UDuN0dUcmQC5MoQSetnxZr3zxLqrpNjCNM750qkkshkqv4rDloK1QsRg8unSGKin63l-RvdiUfF1O2RX_5uLkpKPeO9yJbMyKVCYPJYbWaBFcJCtMDIrPTsrP24zKiIwviDJao0zFzLgndbq0tbFziVFl3uBmOt6TY2izxS2oDZvjzHI8at1j5RgwmN43sUuc88VzJxhC6h1jYZ5KL3bfmwzDK4AfcBUU6AGU7L4FyKw56IY"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-[18px] text-on-surface">Ergo-Flow Hook Set</h3>
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm">5.0</span>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-4">Set of 5 • Aluminum &amp; Silicone</p>
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md text-primary">$45.00</span>
+<button class="w-10 h-10 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center hover:scale-110 transition-all active:scale-95">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-white rounded-[32px] overflow-hidden border border-outline-variant/30 hover:shadow-xl transition-all duration-500 group">
+<div class="relative h-72 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A collection of three yarn cakes in soft gradient colors—dusty rose, lavender, and muted blue. The cakes are wound perfectly, showing the smooth color transitions. They are set against a minimalist white background, creating a soft, airy, and inspiring visual for any textile artist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMt32CDDvLsAJwD4NibAmbWqhcPjuCKpv2OtqO_bVyHv4uFBBliKbrNUmWLPX4SR3BNQnyliunW0yCtx80nNfnBHg0M56QHrNktMFVWzvv-USfruz3fP-lScr-e3a2gLFtE-HvJx4mVRj_F0WpdxDz_tuUyCmV47StkcQrsdioGU_GpgwrlH2G8oo7NhWH7e05tSdwwbaoO48KwSs4nGILCGdIzvRQW14TMYyf6aJV4-p-L-xue1EggyVUxN9gethZ_9aHmXfrsNc"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-[18px] text-on-surface">Cloud Gradient Cake</h3>
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm">4.8</span>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-4">200g • Merino Blend</p>
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md text-primary">$28.90</span>
+<button class="w-10 h-10 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center hover:scale-110 transition-all active:scale-95">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-white rounded-[32px] overflow-hidden border border-outline-variant/30 hover:shadow-xl transition-all duration-500 group">
+<div class="relative h-72 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A beautifully designed, premium printed crochet pattern book lying open on a wooden table. The pages show high-resolution photography of finished garments and clear, elegant diagrams. Beside the book lies a single bamboo hook and a sprig of dried lavender, evoking a slow, mindful crafting lifestyle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKwMXN3p0J-rWM69EsmkVryYV7IYvuz-Jc3TWAFqrUM2ct0U16XAtkyF4iEjNN6RvkEbEcQMuZ5VtPVOsaznimrNPsiBPLEoBMa8lTkOn3vdtn6HJ20C_Y1sXvbyA5GEEqi0p1DJrHqdiSX31alpZtcPceGXi5Xq4RwPznVta1ATNAgXKeiGN8oq54tl6CBlXCt35em9AFN8gw_CAxUEVtG4W4oJIEVgYj5222vENKFLW5ntW6oIu-LMyDGSPT-I828P8XKATLHYI"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-[18px] text-on-surface">Modern Boho Pattern Book</h3>
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm">4.9</span>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-4">12 Exclusive Projects</p>
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md text-primary">$18.00</span>
+<button class="w-10 h-10 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center hover:scale-110 transition-all active:scale-95">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Client Reviews -->
+<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest mb-2 block">Testimonials</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Voices of the Community</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Testimonial 1 -->
+<div class="bg-surface-container-low p-8 rounded-[32px] border border-outline-variant/20">
+<div class="flex gap-1 text-tertiary mb-4">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic mb-8 leading-relaxed">"The quality of the Sunset Organic Cotton is unlike anything I've used before. It glides on the hook and the colors are so vibrant even after washing. Highly recommend!"</p>
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="A profile headshot of a smiling woman with glasses, expressing joy and creativity. She is set against a soft, out-of-focus background of a cozy home interior with plants. The lighting is bright and natural, creating a friendly and authentic testimonial vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUQUnqZAHaNpiXfs1pRc1YS0ByyLTW4Y0YW3A9gtQf4JnmyDxFSQo91CXcIbnW-LCHLTAbFViT_UUHyeSkBmPd0VgwWpsTm4wqMKAM55bFb_isz6d5dlZfycnQhiXjuDJnUGSfR3EAdR4qg2y0EPHe6TjkMlAowHyAq_2nj8dZTx23mwtlVRAcB4HL5FrJ9S-0Ph20VYejg6LZ6aqUZ0nQhrDwESWCyrfey6y8uCRLvcFK7Og_RHDyrKoL8oXfC7v5FpZn06-gFkA"/>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Elena Rodriguez</p>
+<p class="font-label-sm text-label-sm text-outline">Verified Buyer</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-surface-container-low p-8 rounded-[32px] border border-outline-variant/20">
+<div class="flex gap-1 text-tertiary mb-4">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic mb-8 leading-relaxed">"Finally, a brand that cares about sustainability as much as quality. The packaging was beautiful and plastic-free. The hooks are a dream for my carpal tunnel."</p>
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="A profile headshot of a woman with a serene and professional look. She is in a minimalist art studio setting with soft daylight hitting her face from the side. The overall mood is sophisticated and calm, reflecting the artisanal values of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIHUCWRIgKFzPkw-fyToeVbl8fsKhmocVmw1H6A64hLEta3wuu5bej8Csc7NZoVTErCTfW0MTzQEeiAi7Qu2cNBHMtNCXsSTR_Edr-g-fZgf8suhcnbnIZpNppoJsd2UUcQTqYIgOdZvhqTf1d7GzJZkHgb1B6vNEyAVO5yqj4vtTkHS-E14BgRvb3_-s-U2Gk5L4hFGNs7Tr3nq_Y0u48JixAZ4IVCOt2S5tGh9Af3XThgaK_iwT4V14J92yBntoxhQJxds7wBYY"/>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Sarah Mitchell</p>
+<p class="font-label-sm text-label-sm text-outline">Fiber Artist</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-surface-container-low p-8 rounded-[32px] border border-outline-variant/20">
+<div class="flex gap-1 text-tertiary mb-4">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic mb-8 leading-relaxed">"The customer service is impeccable. I had a question about pattern sizing and they replied with a video tutorial within the hour. Best craft studio online!"</p>
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="A profile headshot of a man with a friendly, welcoming smile. He is in a modern, light-filled workshop with blurred wood textures in the background. The lighting is warm and even, creating a sense of reliability and community connection." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_EVxSPV1PdxEaxajjP41tI9jn9_AmKmeLt5YQtxzjzroZ-VSI9pUdvvMUvL1hSfn2a8ZP43zA2vDTQzmPWkxfC-Wb4X0ENC7i2yCiMF603WGlDvFo_mHSEZRzeb3iH8H5EmoA96u-4Pft2tlJBke8ThFS5o7aiitClSISdsojQ40foDF7nATaobRUHCdpPKyxsUfiG1TRPvJwRU9O2svT0LkjQPZaY8JeGWQ-sj5RqwWKv7RTktD-kbTV7vViQa1vrVyX9YwR2Tk"/>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Marcus Chen</p>
+<p class="font-label-sm text-label-sm text-outline">Hobbyist</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter CTA -->
+<section class="mb-section-gap px-margin-desktop max-w-container-max mx-auto">
+<div class="bg-primary-container text-on-primary-container rounded-[48px] p-12 md:p-20 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-fixed-dim/20 rounded-full blur-3xl -mr-20 -mt-20"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary/20 rounded-full blur-3xl -ml-20 -mb-20"></div>
+<h2 class="font-display-lg text-display-lg text-white mb-6 relative z-10">Join Our Creative Circle</h2>
+<p class="font-body-lg text-body-lg text-white/90 mb-10 max-w-xl mx-auto relative z-10">Get weekly inspiration, free patterns, and 10% off your first order of premium supplies.</p>
+<form class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto relative z-10">
+<input class="flex-grow bg-white/10 border border-white/20 text-white placeholder:text-white/60 px-8 py-4 rounded-full focus:ring-2 focus:ring-secondary focus:outline-none backdrop-blur-sm" placeholder="Your email address" type="email"/>
+<button class="bg-white text-primary font-label-md text-label-md px-10 py-4 rounded-full hover:scale-105 transition-all">Subscribe</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-[40px] mt-section-gap bg-surface-container dark:bg-surface-container-high">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-16 max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<span class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim mb-4 block">Stitch &amp; Soul</span>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Handcrafted with love for makers worldwide. We believe in the meditative power of every stitch.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined">favorite</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-tertiary mb-6 uppercase tracking-wider">Shop</h4>
+<ul class="space-y-4">
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary hover:underline decoration-secondary/30 underline-offset-4 transition-all" href="#">All Products</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary hover:underline decoration-secondary/30 underline-offset-4 transition-all" href="#">Premium Yarns</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary hover:underline decoration-secondary/30 underline-offset-4 transition-all" href="#">Hooks &amp; Tools</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary hover:underline decoration-secondary/30 underline-offset-4 transition-all" href="#">Crochet Patterns</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-tertiary mb-6 uppercase tracking-wider">Support</h4>
+<ul class="space-y-4">
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary hover:underline decoration-secondary/30 underline-offset-4 transition-all" href="#">Shipping &amp; Returns</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary hover:underline decoration-secondary/30 underline-offset-4 transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary hover:underline decoration-secondary/30 underline-offset-4 transition-all" href="#">Contact Us</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary hover:underline decoration-secondary/30 underline-offset-4 transition-all" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-tertiary mb-6 uppercase tracking-wider">Contact</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-2">123 Artisan Lane</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-2">Fiber Town, CT 06001</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-6">hello@stitchandsoul.studio</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant font-bold">© 2024 Stitch &amp; Soul Crochet Studio. Handcrafted with love.</p>
+</div>
+</div>
+</footer>
+</body></html>
