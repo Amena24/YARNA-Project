@@ -6,6 +6,10 @@
     <title>Document</title>
            
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Literata:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
     <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -100,8 +104,8 @@
     </script>
 </head>
 <body>
-    <header class="flex justify-between items-center px-8 py-2 bg-[#FBF9F4]">
-        <div class="w-[50px] h-[50px]"><img src="Images/logo.jpeg" alt="" class="w-full h-full"></div>
+    <header class="flex fixed top-0 left-0 right-0 justify-between items-center px-10 py-2 bg-[#FBF9F4] shadow-sm dark:shadow-none">
+        <div class="w-[50px] h-[50px]"><img src="Images/logo.svg" alt="" class="w-full h-full"></div>
         <nav>
             <ul class="flex gap-6 text-[#53433C] font-medium ">
                 <li class="font-medium hover:text-[#8A4B2A] hover:underline hover:underline-offset-8 transition duration-300 cursor-pointer"><a href="">Home</a></li>
@@ -111,9 +115,18 @@
 
             </ul>
         </nav>
-        <div>
-            
-        </div>
+        <div class="flex items-center space-x-6">
+<button class="hover:scale-105 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim">search</span>
+</button>
+<button class="relative hover:scale-105 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-secondary text-white text-[10px] w-4 h-4  items-center justify-center rounded-full hidden"></span>
+</button>
+<img alt="Customer profile" class="w-8 h-8 rounded-full object-cover border-2 border-primary-fixed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDucZvPd9jupmHQSBQiWt5sr5gj6uudYRICKRItjekKQEYIv14pg9owrbaxc5uDUMiTJjyY7pRaHVEbQI3Ot3NnwBuqe7PkjWd4vuyOCzAZwPB8PhUE-2wYIE_y4Svftvw7gi-o2gkNiEKitz1B8RWVq7ot2sds45KH9kxTwkCR9f38P9zpNJ81sRvnQ5Y97DAiYGhrO3qkLHSA3najcyIS1WMqP4ouWUypsWLylhtQ9zpwpfomNcan5G_A7HUZNBA0LasqdOVar9k"/>
+</div>
+</div>
+
     </header>
     
 <footer class="w-full rounded-t-[40px] mt-section-gap bg-surface-container dark:bg-surface-container-high">
