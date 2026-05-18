@@ -13,4 +13,25 @@ if (loggedUser) {
 // password encryption
 const hashPassword = (password) => btoa(password);    ; 
 
+// LOCAL STORAGE SIGN-UP
+const getUsers = () => JSON.parse(localStorage.getItem('users')) || [];
+const saveUsers = (users) =>
+  localStorage.setItem("users", JSON.stringify(users));
+
+const setLoggedUser = (user) =>
+  localStorage.setItem("loggedInUser", JSON.stringify(user));
+
+// CHECK EMAIL EXISTS
+const emailExists = (email) => {
+    const users = getUsers();
+    return users.some(user => user.email === email);
+};
+
+// CREATE USER
+const createUser = (user) => {
+  const users = getUsers();
+  users.push(user);
+  saveUsers(users);
+};
+
 
