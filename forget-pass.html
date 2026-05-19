@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Forgot Password - Stitch &amp; Soul</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#dae8be",
+                        "outline-variant": "#d8c2b9",
+                        "on-secondary-container": "#7a505c",
+                        "primary-fixed": "#ffdbcb",
+                        "on-tertiary-container": "#faffe9",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#eeb8c7",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#623b47",
+                        "tertiary": "#54603f",
+                        "on-error": "#ffffff",
+                        "on-background": "#1b1c19",
+                        "inverse-primary": "#ffb693",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#341000",
+                        "surface-variant": "#e4e2dd",
+                        "surface-bright": "#fbf9f4",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#30312e",
+                        "secondary": "#7d525f",
+                        "on-secondary-fixed": "#30111c",
+                        "background": "#fbf9f4",
+                        "surface-dim": "#dbdad5",
+                        "surface-container-low": "#f5f3ee",
+                        "primary-container": "#a86340",
+                        "on-tertiary-fixed-variant": "#3f4b2c",
+                        "on-surface-variant": "#53433c",
+                        "outline": "#86736b",
+                        "tertiary-fixed-dim": "#becca3",
+                        "secondary-fixed": "#ffd9e2",
+                        "on-surface": "#1b1c19",
+                        "surface": "#fbf9f4",
+                        "on-tertiary-fixed": "#141f05",
+                        "inverse-on-surface": "#f2f1ec",
+                        "surface-container": "#f0eee9",
+                        "surface-container-highest": "#e4e2dd",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#fffbff",
+                        "secondary-container": "#fdc6d4",
+                        "tertiary-container": "#6c7956",
+                        "surface-container-high": "#eae8e3",
+                        "on-primary-fixed-variant": "#703718",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#8d4e2d",
+                        "primary-fixed-dim": "#ffb693",
+                        "primary": "#8a4b2a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "80px",
+                        "margin-desktop": "40px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Literata", "serif"],
+                        "label-md": ["Plus Jakarta Sans", "sans-serif"],
+                        "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+                        "label-sm": ["Plus Jakarta Sans", "sans-serif"],
+                        "headline-md": ["Literata", "serif"],
+                        "headline-lg": ["Literata", "serif"],
+                        "headline-lg-mobile": ["Literata", "serif"],
+                        "body-md": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fbf9f4; /* Light Cream Neutral */
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface antialiased">
+<!-- Transactional Shell: Navigation suppressed for focused recovery task -->
+<main class="min-h-screen flex flex-col items-center justify-center p-margin-mobile md:p-margin-desktop">
+<!-- Logo Anchor -->
+<header class="mb-12">
+<img alt="Yarna Logo" class="w-40 mx-auto" data-alt="Yarna Logo." src="Images/logo.svg"/>
+</header>
+<!-- Recovery Card -->
+<div class="w-full max-w-[480px] bg-white rounded-[32px] shadow-[0_8px_30px_rgb(138,75,42,0.06)] border border-outline-variant/30 overflow-hidden">
+<!-- Texture Preview Image -->
+<div class="h-48 w-full relative overflow-hidden">
+<img alt="Soft Crochet Texture" class="w-full h-full object-cover" data-alt="A high-quality, macro close-up photograph of soft, organic cotton yarn in a warm terracotta hue. The lighting is diffused and natural, highlighting the intricate fibers and soft texture of the knitted pattern. The overall mood is nurturing and sophisticated, reflecting a tactile minimalism aesthetic with a clean, warm-toned color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpt9ORj0lNpg6H62yIov3cKqUw73TAFgu1llT1QZ-46-3xc8AS7PmPYPE8sawfj97R3AvCD28CufQ7VmvVb8u9pSkIadE0_scRDZe4-uVw8YWvw4Z1imOt2OFToJezgcYNNX-mYn_YDrmPSunYPln7zpXm_rDnb2aldzF55OglovSN6p-FuYtXCQI3ABYgwFMDGthmZ31EVFX72zT59E2Zv2H9OrvacMq6pGcdXRuk_sFylfEYC811ga6C9_LZLurvwQ20OVcItzM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+</div>
+<!-- Content Area -->
+<div class="px-8 pb-10 pt-4 text-center">
+<div class="mb-6">
+<h2 class="font-headline-lg text-headline-md text-on-surface mb-3">Recover Access</h2>
+<p class="font-body-md text-on-surface-variant px-2">
+                        Enter your email address and we'll send you a link to reset your password.
+                    </p>
+</div>
+<form class="space-y-6 text-left">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant block ml-1" for="email">
+                            Email Address
+                        </label>
+<input class="w-full px-4 py-3.5 rounded-xl border border-outline-variant bg-surface-container-low text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-tertiary/20 focus:border-tertiary transition-all duration-200" id="email" name="email" placeholder="hello@yarna.com" type="email"/>
+</div>
+<button class="w-full py-4 bg-primary text-on-primary font-label-md text-body-md rounded-xl shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-[20px]" data-icon="mail">mail</span>
+                        Send Reset Link
+                    </button>
+</form>
+<!-- Navigation Link Back -->
+<div class="mt-8 pt-6 border-t border-surface-container">
+<a class="inline-flex items-center gap-2 text-primary font-label-md hover:underline decoration-primary/30 underline-offset-4 transition-all group" href="#" id="backToSignin">
+<span class="material-symbols-outlined text-[18px] group-hover:-translate-x-1 transition-transform" data-icon="arrow_back">arrow_back</span>
+                        Back to Sign In
+                    </a>
+</div>
+</div>
+</div>
+<div id="toast"
+  class="fixed top-6 right-6 z-[9999] hidden px-6 py-4 rounded-2xl shadow-xl bg-primary text-white font-semibold transition-all duration-300 opacity-0 translate-y-[-10px]">
+</div>
+<!-- Utility Footer -->
+<footer class="mt-12 text-center">
+<p class="font-label-sm text-label-sm text-outline">
+                © 2024 Yarna Studio. Crafted with love.
+            </p>
+</footer>
+</main>
+<!-- Visual Embellishment: Soft Tonal Layers -->
+<div class="fixed top-[-10%] right-[-10%] w-[40%] h-[40%] bg-secondary-container/20 blur-[120px] rounded-full -z-10"></div>
+<div class="fixed bottom-[-10%] left-[-10%] w-[35%] h-[35%] bg-tertiary-fixed/30 blur-[100px] rounded-full -z-10"></div>
+<script src="forget-pass.js"></script>
+</body></html>

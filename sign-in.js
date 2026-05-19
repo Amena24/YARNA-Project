@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
   const googleBtn = document.querySelector("button[type='button']");
   const goToSignup = document.getElementById("goToSignup");
+  const forgotPassword = document.getElementById("forgotPassword");
   const toast = document.getElementById("toast");
 
 
@@ -105,6 +106,11 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.href = "index.html";
     }, 2000);
   });
+// GO TO FORGET PASS
+forgotPassword?.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.location.href = "forget-pass.html";
+});
 
 
   goToSignup?.addEventListener("click", (e) => {
