@@ -37,5 +37,47 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 2000);
   };
 
+ // LOCAL STORAGE
+  
+  const getUsers = () =>
+    JSON.parse(localStorage.getItem("users")) || [];
+
+  const findUser = (email) =>
+    getUsers().find((u) => u.email === email);
+
+  
+  // FORM SUBMIT
+  
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const email = document.getElementById("email").value.trim();
+
+    if (!email) {
+      showToast("Please enter your email", "error");
+      return;
+    }
+
+    const user = findUser(email);
+
+    if (!user) {
+      showToast("Email not found", "error");
+      return;
+    }
+
+    //  reset success
+    showToast("Reset link sent to your email ✉️");
+
+    form.reset();
+  });
+
+  
+  // BACK TO SIGN IN
+  
+  backToSignin.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.location.href = "sign-in.html";
+  });
+});
  
  
