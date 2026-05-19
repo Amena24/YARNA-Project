@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400..700;1,400..700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#dae8be",
+                        "outline-variant": "#d8c2b9",
+                        "on-secondary-container": "#7a505c",
+                        "primary-fixed": "#ffdbcb",
+                        "on-tertiary-container": "#faffe9",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#eeb8c7",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#623b47",
+                        "tertiary": "#54603f",
+                        "on-error": "#ffffff",
+                        "on-background": "#1b1c19",
+                        "inverse-primary": "#ffb693",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#341000",
+                        "surface-variant": "#e4e2dd",
+                        "surface-bright": "#fbf9f4",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#30312e",
+                        "secondary": "#7d525f",
+                        "on-secondary-fixed": "#30111c",
+                        "background": "#fbf9f4",
+                        "surface-dim": "#dbdad5",
+                        "surface-container-low": "#f5f3ee",
+                        "primary-container": "#a86340",
+                        "on-tertiary-fixed-variant": "#3f4b2c",
+                        "on-surface-variant": "#53433c",
+                        "outline": "#86736b",
+                        "tertiary-fixed-dim": "#becca3",
+                        "secondary-fixed": "#ffd9e2",
+                        "on-surface": "#1b1c19",
+                        "surface": "#fbf9f4",
+                        "on-tertiary-fixed": "#141f05",
+                        "inverse-on-surface": "#f2f1ec",
+                        "surface-container": "#f0eee9",
+                        "surface-container-highest": "#e4e2dd",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#fffbff",
+                        "secondary-container": "#fdc6d4",
+                        "tertiary-container": "#6c7956",
+                        "surface-container-high": "#eae8e3",
+                        "on-primary-fixed-variant": "#703718",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#8d4e2d",
+                        "primary-fixed-dim": "#ffb693",
+                        "primary": "#8a4b2a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "80px",
+                        "margin-desktop": "40px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Literata"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "headline-md": ["Literata"],
+                        "headline-lg": ["Literata"],
+                        "headline-lg-mobile": ["Literata"],
+                        "body-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-shadow {
+            box-shadow: 0 10px 30px -10px rgba(138, 75, 42, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+<main class="min-h-screen flex items-center justify-center relative overflow-hidden px-margin-mobile md:px-0">
+<!-- Aesthetic Background Elements -->
+<div class="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
+<div class="absolute top-[-10%] right-[-5%] w-96 h-96 bg-primary-fixed/30 rounded-full blur-[100px]"></div>
+<div class="absolute bottom-[-10%] left-[-5%] w-96 h-96 bg-tertiary-fixed/30 rounded-full blur-[100px]"></div>
+</div>
+<!-- Login Container -->
+<div class="w-full max-w-[1100px] flex flex-col md:flex-row bg-surface-container-lowest rounded-[32px] overflow-hidden soft-shadow relative z-10">
+<!-- Left Side: Visual / Branding -->
+<div class="hidden md:block md:w-1/2 relative min-h-[600px]">
+<img alt="Crafting with love" class="absolute inset-0 w-full h-full object-cover" data-alt="A macro close-up photography shot of high-quality organic wool yarn in warm terracotta and cream tones. The texture of the fibers is soft and inviting, perfectly capturing the tactile minimalism of a luxury crochet studio. Soft ambient sunlight filters across the scene, creating gentle highlights and deep, comforting shadows. The overall mood is peaceful and nurturing, emphasizing the handmade artisan quality of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6ttYrhV9W4Hn0wh-X6LLyob3vBM5aJSCHKJRobUkJooPouZw1amFAQ-Qr0lZ4FrIMW5syJWa--JE70Fx90SpfPEaTtMyN_VXK1s_7byc299_22fW2-y7QEh5EY5sLG4UHBIcgz4ByM9wC4YIx5yl4cEdzYTgm4KPEkqZvdSfhGyvGYMb1y_ECoCNAnxGdkVUCl2nyPDfFJ7NCsRue-64loBSBmbepxWjThXG2oh1hPRhmRilvQSjlrzOJWMTETtyrY5s9qxWoeUo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex flex-col justify-end p-12">
+<img 
+  src="Images/logo.svg" 
+  alt="Yarna Logo" 
+   class="w-100 mb-6 mx-auto"
+/>
+<p class="font-body-lg text-body-lg text-on-primary/90 max-w-sm">
+                        Welcome back to your creative sanctuary. Let's finish that masterpiece together.
+                    </p>
+</div>
+</div>
+<!-- Right Side: Form Content -->
+<div class="w-full md:w-1/2 p-8 md:p-16 flex flex-col justify-center">
+<div class="mb-10 text-center md:text-left">
+<div class="md:hidden mb-6 flex justify-center">
+<img 
+  src="Images/logo.svg" 
+  alt="Yarna Logo" 
+   class="w-40 mb-6 mx-auto"
+/>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Welcome Back</h2>
+<p class="text-on-surface-variant font-body-md">Sign in to access your patterns and yarn stash.</p>
+</div>
+<form class="space-y-6">
+<!-- Email Field -->
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant block ml-1" for="email">Email Address</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline-variant">mail</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-none rounded-2xl focus:ring-2 focus:ring-tertiary-container text-on-surface placeholder:text-outline transition-all duration-300" id="email" placeholder="hello@example.com" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant block ml-1" for="password">Password</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline-variant">lock</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-none rounded-2xl focus:ring-2 focus:ring-tertiary-container text-on-surface placeholder:text-outline transition-all duration-300" id="password" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<!-- Options -->
+<div class="flex items-center justify-between text-label-md font-label-md">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="w-5 h-5 rounded-md border-outline-variant text-primary focus:ring-primary-fixed cursor-pointer transition-colors" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Remember Me</span>
+</label>
+<a class="text-primary hover:text-on-primary-fixed-variant transition-colors underline decoration-primary/20 underline-offset-4" href="#">Forgot Password?</a>
+</div>
+<!-- Primary Action -->
+<button class="w-full bg-primary text-on-primary font-label-md text-body-md py-4 rounded-2xl shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300" type="submit">
+                        Sign In
+                    </button>
+<!-- Divider -->
+<div class="flex items-center gap-4 py-2">
+<div class="flex-1 h-px bg-outline-variant/30"></div>
+<span class="text-label-sm font-label-sm text-outline uppercase tracking-widest">or</span>
+<div class="flex-1 h-px bg-outline-variant/30"></div>
+</div>
+<!-- Social Login -->
+<button class="w-full flex items-center justify-center gap-3 bg-surface-container-low border border-outline-variant/20 text-on-surface-variant font-label-md py-4 rounded-2xl hover:bg-surface-variant transition-colors duration-300" type="button">
+<svg class="w-5 h-5" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
+</svg>
+                        Sign in with Google
+                    </button>
+</form>
+<!-- Footer Link -->
+<p class="mt-8 text-center text-label-md text-on-surface-variant">
+                    New to the studio? 
+                    <a class="text-primary font-bold hover:underline underline-offset-4 decoration-primary/30 ml-1" href="#" id="goToSignup">
+  Create an Account
+</a>
+</p>
+</div>
+</div>
+<div id="toast"
+  class="fixed top-6 right-6 z-[9999] hidden px-6 py-4 rounded-2xl shadow-xl bg-primary text-white font-semibold transition-all duration-300 opacity-0 translate-y-[-10px]">
+</div>
+</main>
+<script type="module" src="sign-in.js"></script>
+</body></html>
