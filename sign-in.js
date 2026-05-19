@@ -1,54 +1,24 @@
-"use strict";
-
+console.log("Sign-in script loaded");
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Sign In Loaded");
+  console.log("Sign-in loaded");
 
   const form = document.querySelector("form");
   const googleBtn = document.querySelector("button[type='button']");
   const goToSignup = document.getElementById("goToSignup");
-  const toast = document.getElementById("toast");
-
-  // ======================
-  // TOAST SYSTEM
-  // ======================
-  const showToast = (message) => {
-    if (!toast) return;
-
-    toast.textContent = message;
-    toast.classList.remove("hidden");
-
-    setTimeout(() => {
-      toast.classList.add("opacity-100", "translate-y-0");
-    }, 50);
-
-    setTimeout(() => {
-      toast.classList.remove("opacity-100", "translate-y-0");
-
-      setTimeout(() => {
-        toast.classList.add("hidden");
-      }, 300);
-    }, 2000);
-  };
 
   // ======================
   // LOCAL STORAGE HELPERS
   // ======================
-  const getUsers = () => JSON.parse(localStorage.getItem("users")) || [];
+  const getUsers = () =>
+    JSON.parse(localStorage.getItem("users")) || [];
 
   const setLoggedUser = (user) =>
     localStorage.setItem("loggedInUser", JSON.stringify(user));
 
-  const hashPassword = (p) => btoa(p);
+  const hashPassword = (password) => btoa(password);
 
   const findUser = (email) =>
-    getUsers().find((u) => u.email === email);
-
-  // ======================
-  // BLOCK IF ALREADY LOGGED IN
-  // ======================
-  if (localStorage.getItem("loggedInUser")) {
-    window.location.href = "index.html";
-  }
+    getUsers().find((user) => user.email === email);
 
   // ======================
   // SIGN IN
@@ -59,30 +29,31 @@ document.addEventListener("DOMContentLoaded", () => {
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value;
 
+    // VALIDATION
     if (!email || !password) {
-      showToast("Please fill all fields");
+      alert("Please fill all fields");
       return;
     }
 
     const user = findUser(email);
 
     if (!user) {
-      showToast("User not found. Please sign up first.");
+      alert("User not found. Please sign up first.");
       return;
     }
 
     if (user.password !== hashPassword(password)) {
-      showToast("Incorrect password");
+      alert("Incorrect password");
       return;
     }
 
     setLoggedUser(user);
 
-    showToast("Welcome back 🎉");
+    console.log("Logged in user:", user);
 
-    setTimeout(() => {
-      window.location.href = "index.html";
-    }, 2000);
+    alert("Welcome back ");
+
+    window.location.href = "index.html";
   });
 
   // ======================
@@ -101,18 +72,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setLoggedUser(googleUser);
 
-    showToast("Signed in with Google 🎉");
+    alert("Signed in with Google 🎉");
 
-    setTimeout(() => {
-      window.location.href = "index.html";
-    }, 2000);
+    window.location.href = "index.html";
   });
 
   // ======================
-  // NAV TO SIGN UP
+  // NAVIGATION TO SIGN UP
   // ======================
   goToSignup?.addEventListener("click", (e) => {
     e.preventDefault();
-    window.location.href = "sign-up.html";
+    window.location.href = "signup.html";
   });
 });
