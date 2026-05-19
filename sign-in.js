@@ -5,10 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const googleBtn = document.querySelector("button[type='button']");
   const goToSignup = document.getElementById("goToSignup");
   const toast = document.getElementById("toast");
-});
 
-// TOAST SYSTEM
-const showToast = (message) => {
+  // TOAST SYSTEM
+  const showToast = (message) => {
     if (!toast) return;
 
     toast.textContent = message;
@@ -27,9 +26,9 @@ const showToast = (message) => {
     }, 2000);
   };
 
-
-// LOCAL STORAGE 
-const getUsers = () => JSON.parse(localStorage.getItem("users")) || [];
+  // LOCAL STORAGE
+  const getUsers = () =>
+    JSON.parse(localStorage.getItem("users")) || [];
 
   const setLoggedUser = (user) =>
     localStorage.setItem("loggedInUser", JSON.stringify(user));
@@ -38,15 +37,14 @@ const getUsers = () => JSON.parse(localStorage.getItem("users")) || [];
 
   const findUser = (email) =>
     getUsers().find((u) => u.email === email);
-  
 
-  // BLOCK IF ALREADY LOGGED IN
+  // BLOCK IF LOGGED IN
   if (localStorage.getItem("loggedInUser")) {
     window.location.href = "index.html";
   }
 
-    // SIGN IN
-    form.addEventListener("submit", (e) => {
+  // SIGN IN
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const email = document.getElementById("email").value.trim();
@@ -60,7 +58,7 @@ const getUsers = () => JSON.parse(localStorage.getItem("users")) || [];
     const user = findUser(email);
 
     if (!user) {
-      showToast("User not found. Please sign up first.");
+      showToast("User not found");
       return;
     }
 
@@ -78,7 +76,7 @@ const getUsers = () => JSON.parse(localStorage.getItem("users")) || [];
     }, 2000);
   });
 
-  // GOOGLE SIGN IN (MOCK)
+  // GOOGLE LOGIN
   googleBtn.addEventListener("click", (e) => {
     e.preventDefault();
 
@@ -99,10 +97,9 @@ const getUsers = () => JSON.parse(localStorage.getItem("users")) || [];
     }, 2000);
   });
 
-  
-   // NAV TO SIGN UP
- 
+  // GO TO SIGNUP
   goToSignup?.addEventListener("click", (e) => {
     e.preventDefault();
     window.location.href = "sign-up.html";
   });
+});

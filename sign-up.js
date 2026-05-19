@@ -1,129 +1,14 @@
-
-// document.addEventListener("DOMContentLoaded", () => {
-// const form = document.querySelector('form');
-// const googleBtn = document.querySelector("button[type='button']");
-
-// googleBtn.addEventListener('click', () => {
-//     // Handle Google sign-up logic here
-// });
-
-// // LOCAL STORAGE SIGN-UP
-// const getUsers = () => JSON.parse(localStorage.getItem('users')) || [];
-// const saveUsers = (users) =>
-//     localStorage.setItem("users", JSON.stringify(users));
-
-// const setLoggedUser = (user) =>
-//     localStorage.setItem("loggedInUser", JSON.stringify(user));
-
-// // Prevent logged user from opening signup again
-// const loggedUser = JSON.parse(localStorage.getItem("loggedInUser"));
-// if (loggedUser) {
-//     window.location.href = 'index.html'; // Redirect to homepage 
-// }
-
-// // password encryption
-// const hashPassword = (password) => btoa(password); 
-//    ; 
-// // CHECK EMAIL EXISTS
-// const emailExists = (email) => {
-//     const users = getUsers();
-//     return users.some(user => user.email === email);
-// };
-
-// // CREATE USER
-// const createUser = (user) => {
-//   const users = getUsers();
-//   users.push(user);
-//   saveUsers(users);
-// }; 
-
-// //  SIGN UP FORM SUBMISSION
-// form.addEventListener('submit', (e)=> {
-//     e.preventDefault();
-//      const fullName = document.getElementById("full_name").value.trim();
-//   const email = document.getElementById("email").value.trim();
-//   const password = document.getElementById("password").value;
-//   const confirmPassword = document.getElementById("confirm_password").value;
-//     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-// })
-// // VALIDATION
-// if (!fullName || !email || !password || !confirmPassword) {
-//     alert("Please fill in all fields.");
-//     return;
-//   } 
-//    if (!emailRegex.test(email)) {
-//     alert("Invalid email format");
-//     return;
-//   }
-
-//   if (password.length < 6) {
-//     alert("Password must be at least 6 characters");
-//     return;
-//   }
-
-//   if (password !== confirmPassword) {
-//     alert("Passwords do not match");
-//     return;
-//   }
-
-//   if (isEmailExists(email)) {
-//     alert("Email already exists");
-//     return;
-//   }
-
-//     const newUser = {
-//      id: Date.now(),
-//     fullName,
-//     email,
-//     password: hashPassword(password),
-//     provider: "local"
-//   };
-//     createUser(newUser);
-// setLoggedUser(newUser);
-
-//   console.log("Users after signup:", getUsers());
-
-// alert("Account created successfully!");
-// window.location.href = "index.html"; // Redirect to homepage 
-
-
-// // GOOGLE SIGN UP (MOCK)
-// googleBtn.addEventListener('click', () => {
-//     const googleUser = {
-//         id: Date.now(),
-//         fullName: "Google User",
-//         email: "googleuser@gmail.com",
-//         password: hashPassword("googlepassword"),
-//         provider: "google"
-//     };
-
-
-//   const users = getUsers();
-
-//   if (!users.some((u) => u.email === googleUser.email)) {
-//     createUser(googleUser);
-//   }
-
-
-//     setLoggedUser(googleUser);
-//     console.log("Users after Google signup:", getUsers());
-//     alert("Account created successfully!");
-//     window.location.href = "index.html"; // Redirect to homepage 
-// });
-// });
-
-
 document.addEventListener("DOMContentLoaded", () => {
   console.log("JS Loaded");
 
   const form = document.querySelector("form");
   const googleBtn = document.querySelector("button[type='button']");
   const toast = document.getElementById("toast");
-    const goToSignin = document.getElementById("goToSignin");
-    
-  //TOAST SYSTEM
-  
+  const goToSignin = document.getElementById("goToSignin");
+
+  // ======================
+  // TOAST SYSTEM
+  // ======================
   const showToast = (message) => {
     if (!toast) return;
 
@@ -144,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // ======================
-  // LOCAL STORAGE HELPERS
+  // LOCAL STORAGE
   // ======================
   const getUsers = () =>
     JSON.parse(localStorage.getItem("users")) || [];
@@ -156,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("loggedInUser", JSON.stringify(user));
 
   // ======================
-  // CHECK LOGGED USER
+  // BLOCK IF LOGGED IN
   // ======================
   const loggedUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
@@ -165,19 +50,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ======================
-  // PASSWORD HASH
+  // HELPERS
   // ======================
   const hashPassword = (password) => btoa(password);
 
-  // ======================
-  // CHECK EMAIL EXISTS
-  // ======================
   const emailExists = (email) =>
     getUsers().some((user) => user.email === email);
 
-  // ======================
-  // CREATE USER
-  // ======================
   const createUser = (user) => {
     const users = getUsers();
     users.push(user);
@@ -185,67 +64,63 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // ======================
-  // SIGN UP FORM
+  // SIGN UP
   // ======================
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const fullName = document
-      .getElementById("full_name")
-      .value.trim();
+    const fullName = document.getElementById("full_name").value.trim();
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value;
-    const confirmPassword =
-      document.getElementById("confirm_password").value;
+    const confirmPassword = document.getElementById("confirm_password").value;
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-// VALIDATION
-if (!fullName || !email || !password || !confirmPassword) {
-  showToast("Please fill in all fields.");
-  return;
-}
 
-if (!emailRegex.test(email)) {
-  showToast("Invalid email format");
-  return;
-}
+    if (!fullName || !email || !password || !confirmPassword) {
+      showToast("Please fill in all fields.");
+      return;
+    }
 
-if (password.length < 6) {
-  showToast("Password must be at least 6 characters");
-  return;
-}
+    if (!emailRegex.test(email)) {
+      showToast("Invalid email format");
+      return;
+    }
 
-if (password !== confirmPassword) {
-  showToast("Passwords do not match");
-  return;
-}
+    if (password.length < 6) {
+      showToast("Password must be at least 6 characters");
+      return;
+    }
 
-if (emailExists(email)) {
-  showToast("Email already exists");
-  return;
-}
+    if (password !== confirmPassword) {
+      showToast("Passwords do not match");
+      return;
+    }
 
-const newUser = {
-  id: Date.now(),
-  fullName,
-  email,
-  password: hashPassword(password),
-  provider: "local",
-};
+    if (emailExists(email)) {
+      showToast("Email already exists");
+      return;
+    }
 
-createUser(newUser);
-setLoggedUser(newUser);
+    const newUser = {
+      id: Date.now(),
+      fullName,
+      email,
+      password: hashPassword(password),
+      provider: "local",
+    };
 
-console.log("Users after signup:", getUsers());
+    createUser(newUser);
+    setLoggedUser(newUser);
 
-showToast("Account created successfully! 🎉");
+    showToast("Account created successfully! 🎉");
 
-setTimeout(() => {
-  window.location.href = "index.html";
-}, 2000);
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 2000);
+  });
 
   // ======================
-  // GOOGLE SIGN UP (MOCK)
+  // GOOGLE SIGN UP
   // ======================
   googleBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -266,13 +141,16 @@ setTimeout(() => {
 
     setLoggedUser(googleUser);
 
-    console.log("Users after Google signup:", getUsers());
+    showToast("Signed up with Google 🎉");
 
-    showToast("Account created successfully! 🎉");
-    window.location.href = "index.html";
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 2000);
   });
-});
 
+  // ======================
+  // NAV TO SIGN IN
+  // ======================
   goToSignin?.addEventListener("click", (e) => {
     e.preventDefault();
     window.location.href = "sign-in.html";
