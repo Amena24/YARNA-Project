@@ -1,5 +1,4 @@
 
-
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Sign In Loaded");
 
@@ -8,9 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const goToSignup = document.getElementById("goToSignup");
   const toast = document.getElementById("toast");
 
-  
+
   // TOAST SYSTEM
-  
+
   const showToast = (message) => {
     if (!toast) return;
 
@@ -30,10 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 2000);
   };
 
-  
-  // LOCAL STORAGE 
-  
-  const getUsers = () => JSON.parse(localStorage.getItem("users")) || [];
+
+  // LOCAL STORAGE
+  const getUsers = () =>
+    JSON.parse(localStorage.getItem("users")) || [];
+
 
   const setLoggedUser = (user) =>
     localStorage.setItem("loggedInUser", JSON.stringify(user));
@@ -43,16 +43,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const findUser = (email) =>
     getUsers().find((u) => u.email === email);
 
-  
-  // BLOCK IF ALREADY LOGGED IN
-  
+
+  // BLOCK IF LOGGED IN
+
   if (localStorage.getItem("loggedInUser")) {
     window.location.href = "index.html";
   }
 
-  
   // SIGN IN
-  
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -67,7 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const user = findUser(email);
 
     if (!user) {
-      showToast("User not found. Please sign up first.");
+
+      showToast("User not found");
+
       return;
     }
 
@@ -85,9 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 2000);
   });
 
- 
-  // GOOGLE SIGN IN (MOCK)
-  
+
   googleBtn.addEventListener("click", (e) => {
     e.preventDefault();
 
@@ -108,8 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 2000);
   });
 
-
-  // NAV TO SIGN UP
 
   goToSignup?.addEventListener("click", (e) => {
     e.preventDefault();
