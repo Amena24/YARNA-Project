@@ -119,6 +119,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const form = document.querySelector("form");
   const googleBtn = document.querySelector("button[type='button']");
+  const toast = document.getElementById("toast");
+    const goToSignin = document.getElementById("goToSignin");
+  //TOAST SYSTEM
+  
+  const showToast = (message) => {
+    if (!toast) return;
+
+    toast.textContent = message;
+    toast.classList.remove("hidden");
+
+    setTimeout(() => {
+      toast.classList.add("opacity-100", "translate-y-0");
+    }, 50);
+
+    setTimeout(() => {
+      toast.classList.remove("opacity-100", "translate-y-0");
+
+      setTimeout(() => {
+        toast.classList.add("hidden");
+      }, 300);
+    }, 2000);
+  };
 
   // ======================
   // LOCAL STORAGE HELPERS
@@ -176,49 +198,50 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("confirm_password").value;
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// VALIDATION
+if (!fullName || !email || !password || !confirmPassword) {
+  showToast("Please fill in all fields.");
+  return;
+}
 
-    // VALIDATION
-    if (!fullName || !email || !password || !confirmPassword) {
-      alert("Please fill in all fields.");
-      return;
-    }
+if (!emailRegex.test(email)) {
+  showToast("Invalid email format");
+  return;
+}
 
-    if (!emailRegex.test(email)) {
-      alert("Invalid email format");
-      return;
-    }
+if (password.length < 6) {
+  showToast("Password must be at least 6 characters");
+  return;
+}
 
-    if (password.length < 6) {
-      alert("Password must be at least 6 characters");
-      return;
-    }
+if (password !== confirmPassword) {
+  showToast("Passwords do not match");
+  return;
+}
 
-    if (password !== confirmPassword) {
-      alert("Passwords do not match");
-      return;
-    }
+if (emailExists(email)) {
+  showToast("Email already exists");
+  return;
+}
 
-    if (emailExists(email)) {
-      alert("Email already exists");
-      return;
-    }
+const newUser = {
+  id: Date.now(),
+  fullName,
+  email,
+  password: hashPassword(password),
+  provider: "local",
+};
 
-    const newUser = {
-      id: Date.now(),
-      fullName,
-      email,
-      password: hashPassword(password),
-      provider: "local",
-    };
+createUser(newUser);
+setLoggedUser(newUser);
 
-    createUser(newUser);
-    setLoggedUser(newUser);
+console.log("Users after signup:", getUsers());
 
-    console.log("Users after signup:", getUsers());
+showToast("Account created successfully! 🎉");
 
-    alert("Account created successfully!");
-    window.location.href = "index.html";
-  });
+setTimeout(() => {
+  window.location.href = "index.html";
+}, 2000);
 
   // ======================
   // GOOGLE SIGN UP (MOCK)
@@ -244,7 +267,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log("Users after Google signup:", getUsers());
 
-    alert("Account created successfully!");
+    showToast("Account created successfully! 🎉");
     window.location.href = "index.html";
+  });
+});
+
+  goToSignin?.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.location.href = "sign-in.html";
   });
 });
