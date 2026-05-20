@@ -155,18 +155,8 @@
   </div>
 
   <!-- Pagination -->
-  <div class="mt-section-gap flex justify-center items-center gap-4">
-    <button class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface-variant">
-      <span class="material-symbols-outlined">chevron_left</span>
-    </button>
-    <div class="flex items-center gap-2">
-      <button class="w-10 h-10 rounded-full bg-primary text-white font-label-md text-label-md">1</button>
-      <button class="w-10 h-10 rounded-full hover:bg-surface-container transition-colors font-label-md text-label-md text-on-surface-variant">2</button>
-      <button class="w-10 h-10 rounded-full hover:bg-surface-container transition-colors font-label-md text-label-md text-on-surface-variant">3</button>
-    </div>
-    <button class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface-variant">
-      <span class="material-symbols-outlined">chevron_right</span>
-    </button>
+  <div id="pagination-container" class="mt-section-gap flex justify-center items-center gap-4">
+    <!-- Pagination will be injected here by JS -->
   </div>
 
 </main>
@@ -176,12 +166,14 @@
   let activeCategory = 'all';
   let activeTag = null;
   let quantities = {};   // { productId: count }
+  let currentPage = 1;
+  const productsPerPage = 6;
 
   // Initialise quantities
   products.forEach(p => quantities[p.id] = 1);
 
-  // ── Render ─────────────────────────────────────────────────
-  function renderProducts() {
+  // ── Filter & Sort Logic ────────────────────────────────────
+  function getFilteredAndSortedProducts() {
     let filtered = [...products];
 
     if (activeCategory !== 'all') {
@@ -195,17 +187,93 @@
     if (sortValue === 'price-asc')  filtered.sort((a, b) => a.price - b.price);
     if (sortValue === 'price-desc') filtered.sort((a, b) => b.price - a.price);
 
+    return filtered;
+  }
+
+  // ── Pagination ─────────────────────────────────────────────
+  function getPaginatedProducts(products_array) {
+    const start = (currentPage - 1) * productsPerPage;
+    const end = start + productsPerPage;
+    return products_array.slice(start, end);
+  }
+
+  function renderPagination(totalProducts) {
+    const totalPages = Math.ceil(totalProducts / productsPerPage);
+    const paginationContainer = document.getElementById('pagination-container');
+    
+    if (!paginationContainer) return;
+    
+    if (totalPages <= 1) {
+      paginationContainer.innerHTML = '';
+      return;
+    }
+    
+    // Build pagination HTML
+    let paginationHtml = `
+      <button onclick="goToPage(${currentPage - 1})" class="prev-btn w-12 h-12 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface-variant ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : ''}" ${currentPage === 1 ? 'disabled' : ''}>
+        <span class="material-symbols-outlined">chevron_left</span>
+      </button>
+      <div class="flex items-center gap-2">
+    `;
+    
+    for (let i = 1; i <= totalPages; i++) {
+      paginationHtml += `
+        <button onclick="goToPage(${i})" class="page-btn w-10 h-10 rounded-full ${currentPage === i ? 'bg-primary text-white' : 'hover:bg-surface-container transition-colors text-on-surface-variant'} font-label-md text-label-md">
+          ${i}
+        </button>
+      `;
+    }
+    
+    paginationHtml += `
+      </div>
+      <button onclick="goToPage(${currentPage + 1})" class="next-btn w-12 h-12 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface-variant ${currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : ''}" ${currentPage === totalPages ? 'disabled' : ''}>
+        <span class="material-symbols-outlined">chevron_right</span>
+      </button>
+    `;
+    
+    paginationContainer.innerHTML = paginationHtml;
+  }
+
+  function goToPage(page) {
+    const filtered = getFilteredAndSortedProducts();
+    const totalPages = Math.ceil(filtered.length / productsPerPage);
+    
+    if (page < 1 || page > totalPages) return;
+    
+    currentPage = page;
+    renderProducts();
+    
+    // Smooth scroll to top of product grid
+    document.getElementById('product-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // ── Render ─────────────────────────────────────────────────
+  function renderProducts() {
+    const filtered = getFilteredAndSortedProducts();
+    const totalProducts = filtered.length;
+    const paginatedProducts = getPaginatedProducts(filtered);
+    
     const grid = document.getElementById('product-grid');
-    grid.innerHTML = filtered.length
-      ? filtered.map(p => buildCard(p)).join('')
+    grid.innerHTML = paginatedProducts.length
+      ? paginatedProducts.map(p => buildCard(p)).join('')
       : '<p class="col-span-3 text-center text-on-surface-variant font-body-md text-body-md py-16">No products found.</p>';
+    
+    renderPagination(totalProducts);
   }
 
   function buildCard(p) {
     // Badge HTML
-    const badgeHtml = p.badge
-      ? `<span class="absolute top-4 ${p.badge.position === 'right' ? 'right-4' : 'left-4'} bg-${p.badge.color} text-white font-label-sm text-label-sm px-3 py-1 rounded-full">${p.badge.text}</span>`
-      : '';
+    let badgeHtml = '';
+    if (p.badge) {
+      let bgColor = '';
+      switch(p.badge.color) {
+        case 'primary': bgColor = '#8a4b2a'; break;
+        case 'secondary': bgColor = '#7d525f'; break;
+        case 'tertiary': bgColor = '#54603f'; break;
+        default: bgColor = '#8a4b2a';
+      }
+      badgeHtml = `<span class="absolute top-4 ${p.badge.position === 'right' ? 'right-4' : 'left-4'} text-white font-label-sm text-label-sm px-3 py-1 rounded-full" style="background-color: ${bgColor}">${p.badge.text}</span>`;
+    }
 
     // Color swatches (threads) or size badge (needles)
     let bottomDetail = '';
@@ -266,14 +334,18 @@
   function filterByCategory(cat) {
     activeCategory = cat;
     activeTag = null;
+    currentPage = 1;
 
     // Update tab styles
     document.querySelectorAll('.tab-btn').forEach(btn => {
       const isActive = btn.dataset.category === cat;
-      btn.classList.toggle('text-primary', isActive);
-      btn.classList.toggle('border-b-2', isActive);
-      btn.classList.toggle('border-primary', isActive);
-      btn.classList.toggle('text-on-surface-variant', !isActive);
+      if (isActive) {
+        btn.classList.add('text-primary', 'border-b-2', 'border-primary');
+        btn.classList.remove('text-on-surface-variant');
+      } else {
+        btn.classList.remove('text-primary', 'border-b-2', 'border-primary');
+        btn.classList.add('text-on-surface-variant');
+      }
     });
 
     // Reset filter tags
@@ -287,24 +359,31 @@
 
   function filterByTag(tag) {
     activeTag = activeTag === tag ? null : tag;
+    currentPage = 1;
 
     document.querySelectorAll('.filter-tag').forEach(t => {
       const isActive = t.dataset.tag === activeTag;
-      t.classList.toggle('bg-secondary-container', isActive);
-      t.classList.toggle('text-on-secondary-container', isActive);
-      t.classList.toggle('bg-surface-container', !isActive);
-      t.classList.toggle('text-on-surface-variant', !isActive);
+      if (isActive) {
+        t.classList.add('bg-secondary-container', 'text-on-secondary-container');
+        t.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      } else {
+        t.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+        t.classList.add('bg-surface-container', 'text-on-surface-variant');
+      }
     });
 
     renderProducts();
   }
 
   function sortProducts() {
+    currentPage = 1;
     renderProducts();
   }
 
   // ── Init ───────────────────────────────────────────────────
-  document.addEventListener('DOMContentLoaded', renderProducts);
+  document.addEventListener('DOMContentLoaded', () => {
+    renderProducts();
+  });
 </script>
 
 </body>
