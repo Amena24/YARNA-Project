@@ -72,11 +72,11 @@ const products = [
     badge: null,
     description: "Crisp, cool linen and cotton mix. Excellent stitch definition for summer patterns.",
     images: {
-      "#dae8be": "https://lh3.googleusercontent.com/aida-public/AB6AXuDm1kJlYjbAq7sRAzFaylsLIT9FmKiv7xboIc0ftU-4D4TEM6iEWZ5RQuODdKRdbcFDg_ckj3c5AAr6lic6a4eCx6KeOkGsMAbOVsl_mEd_ZD9oII9AVqplRAjkHEiKHG_BMvV5MunlRS8BDTN5ioqJ3mAmANupGNqASRHNMXABEQ1WFWuy3Stp8PyogZuHdDS8KMkXvz7BKnmz2qybS9qd_QW8qoCCih-u-34tQcT8LLc-G0nQUAb3pSY_5eacXWCOcnZRlhWNRBs",
-      "#becca3": "https://lh3.googleusercontent.com/aida-public/AB6AXuDWIwTk9Opydkr90EFRzQG8UteOWGqdJ4Yk9IivrCtlNfl8j9_0d_-lCewtleBJIXWsQ3a-Sq_b7UnljK2V_swLkNHOjbza1_4Xj-ag1UR6p6toOLEteiXaHHnrk3tCBTETIEXeiyhJDh_rhSZDdQn5Z776Bz_lQBZlVeEW-XtZn_XoSviEQfcJbyljjIGwic8t49Wd78nsz0rhHdCEPnM2FVcz5kWZZTIigqINEgy7awTKTyia-fdr2iibNnERaJ9URzDdt7vYJMw"
+      "#F6C1CC": "https://i.pinimg.com/1200x/9c/ab/f6/9cabf668973cb0e3790691d29dcb5ebd.jpg",
+      "#000000": "https://i.pinimg.com/1200x/24/67/65/24676596a2d4665222f87098a4e8caf8.jpg"
     },
     imageAlt: "Skeins of natural undyed wool yarn in woven basket in sunny studio",
-    colors: ["#dae8be", "#becca3"],
+    colors: ["#F6C1CC", "#000000"],
     activeColorIndex: 0,
     type: "thread",
     filters: ["Cotton", "Organic"]
@@ -136,12 +136,12 @@ const products = [
     badge: { text: "Premium", position: "right", color: "primary" },
     description: "Baby alpaca and silk blend. Incredibly soft with a subtle halo effect.",
     images: {
-      "#6b8e9c": "https://lh3.googleusercontent.com/aida-public/AB6AXuDOSHzQXRu_GGXBQoUPYZcdv3-zSs1PujeGtHFAclN4hV3g9yIw-8im4LPXTaIA4dhNPA_OvETbrQGziSWi0wEavyrqiKBgmNSyAAXrVNo8qb7UytlYhNVGfIf-P2_pP-e0zeMyFI66r6DAt0IjMbyo07sue79qHRZYOGqcvY8FKF5VkNGGY27t7QbgeBdRnvdAFY08_NvFGj1PZYgJx96QIGzr_OtxINeFMPjT8FlN2QIMGLDtUwJ0vlnSh2pP0p0vYYJZKpGKsHY",
-      "#eeb8c7": "https://lh3.googleusercontent.com/aida-public/AB6AXuDWIwTk9Opydkr90EFRzQG8UteOWGqdJ4Yk9IivrCtlNfl8j9_0d_-lCewtleBJIXWsQ3a-Sq_b7UnljK2V_swLkNHOjbza1_4Xj-ag1UR6p6toOLEteiXaHHnrk3tCBTETIEXeiyhJDh_rhSZDdQn5Z776Bz_lQBZlVeEW-XtZn_XoSviEQfcJbyljjIGwic8t49Wd78nsz0rhHdCEPnM2FVcz5kWZZTIigqINEgy7awTKTyia-fdr2iibNnERaJ9URzDdt7vYJMw",
-      "#fbf9f4": "https://lh3.googleusercontent.com/aida-public/AB6AXuDm1kJlYjbAq7sRAzFaylsLIT9FmKiv7xboIc0ftU-4D4TEM6iEWZ5RQuODdKRdbcFDg_ckj3c5AAr6lic6a4eCx6KeOkGsMAbOVsl_mEd_ZD9oII9AVqplRAjkHEiKHG_BMvV5MunlRS8BDTN5ioqJ3mAmANupGNqASRHNMXABEQ1WFWuy3Stp8PyogZuHdDS8KMkXvz7BKnmz2qybS9qd_QW8qoCCih-u-34tQcT8LLc-G0nQUAb3pSY_5eacXWCOcnZRlhWNRBs"
+      "#5A7A87": "https://i.pinimg.com/1200x/30/bd/57/30bd57f54f052cab83efc80b585782ef.jpg",
+      "#66001A": "https://i.pinimg.com/1200x/46/1d/ad/461dad5475f6022d0a58e99cefcf4cd3.jpg",
+      "#F4C2C2": "https://i.pinimg.com/1200x/63/9f/df/639fdf73b5248702366d1bd993541de0.jpg"
     },
     imageAlt: "Blue alpaca yarn skein in soft natural lighting",
-    colors: ["#6b8e9c", "#eeb8c7", "#fbf9f4"],
+    colors: ["#5A7A87", "#66001A", "#F4C2C2"],
     activeColorIndex: 0,
     type: "thread",
     filters: ["Silk Blend"]
@@ -168,12 +168,12 @@ const products = [
     badge: null,
     description: "Vibrant golden yellow organic cotton. Colorfast and perfect for heirloom projects.",
     images: {
-      "#e0a33e": "https://lh3.googleusercontent.com/aida-public/AB6AXuDm1kJlYjbAq7sRAzFaylsLIT9FmKiv7xboIc0ftU-4D4TEM6iEWZ5RQuODdKRdbcFDg_ckj3c5AAr6lic6a4eCx6KeOkGsMAbOVsl_mEd_ZD9oII9AVqplRAjkHEiKHG_BMvV5MunlRS8BDTN5ioqJ3mAmANupGNqASRHNMXABEQ1WFWuy3Stp8PyogZuHdDS8KMkXvz7BKnmz2qybS9qd_QW8qoCCih-u-34tQcT8LLc-G0nQUAb3pSY_5eacXWCOcnZRlhWNRBs",
-      "#8a4b2a": "https://lh3.googleusercontent.com/aida-public/AB6AXuDWIwTk9Opydkr90EFRzQG8UteOWGqdJ4Yk9IivrCtlNfl8j9_0d_-lCewtleBJIXWsQ3a-Sq_b7UnljK2V_swLkNHOjbza1_4Xj-ag1UR6p6toOLEteiXaHHnrk3tCBTETIEXeiyhJDh_rhSZDdQn5Z776Bz_lQBZlVeEW-XtZn_XoSviEQfcJbyljjIGwic8t49Wd78nsz0rhHdCEPnM2FVcz5kWZZTIigqINEgy7awTKTyia-fdr2iibNnERaJ9URzDdt7vYJMw",
-      "#becca3": "https://lh3.googleusercontent.com/aida-public/AB6AXuDOSHzQXRu_GGXBQoUPYZcdv3-zSs1PujeGtHFAclN4hV3g9yIw-8im4LPXTaIA4dhNPA_OvETbrQGziSWi0wEavyrqiKBgmNSyAAXrVNo8qb7UytlYhNVGfIf-P2_pP-e0zeMyFI66r6DAt0IjMbyo07sue79qHRZYOGqcvY8FKF5VkNGGY27t7QbgeBdRnvdAFY08_NvFGj1PZYgJx96QIGzr_OtxINeFMPjT8FlN2QIMGLDtUwJ0vlnSh2pP0p0vYYJZKpGKsHY"
+      "#1C2A44": "https://i.pinimg.com/1200x/25/cc/e7/25cce7f1b6083c11ac38d00af5b78a9c.jpg",
+      "#CBAED1": "https://i.pinimg.com/736x/d6/83/49/d6834925b9c2b7964fc84e71ccbc5e80.jpg",
+      "#A9A9A9": "https://i.pinimg.com/736x/92/93/df/9293df0be9c42c1ff7117b8fb252d97f.jpg"
     },
     imageAlt: "Bright yellow yarn skein on rustic wooden table",
-    colors: ["#e0a33e", "#8a4b2a", "#becca3"],
+    colors: ["#1C2A44", "#CBAED1", "#A9A9A9"],
     activeColorIndex: 0,
     type: "thread",
     filters: ["Cotton", "Organic"]
@@ -200,15 +200,15 @@ const products = [
     badge: { text: "New Arrival", position: "left", color: "primary" },
     description: "Soft wool blend with tweed flecks. Perfect for cozy winter garments and accessories.",
     images: {
-      "#8b9a8f": "https://lh3.googleusercontent.com/aida-public/AB6AXuDm1kJlYjbAq7sRAzFaylsLIT9FmKiv7xboIc0ftU-4D4TEM6iEWZ5RQuODdKRdbcFDg_ckj3c5AAr6lic6a4eCx6KeOkGsMAbOVsl_mEd_ZD9oII9AVqplRAjkHEiKHG_BMvV5MunlRS8BDTN5ioqJ3mAmANupGNqASRHNMXABEQ1WFWuy3Stp8PyogZuHdDS8KMkXvz7BKnmz2qybS9qd_QW8qoCCih-u-34tQcT8LLc-G0nQUAb3pSY_5eacXWCOcnZRlhWNRBs",
-      "#7d525f": "https://lh3.googleusercontent.com/aida-public/AB6AXuDWIwTk9Opydkr90EFRzQG8UteOWGqdJ4Yk9IivrCtlNfl8j9_0d_-lCewtleBJIXWsQ3a-Sq_b7UnljK2V_swLkNHOjbza1_4Xj-ag1UR6p6toOLEteiXaHHnrk3tCBTETIEXeiyhJDh_rhSZDdQn5Z776Bz_lQBZlVeEW-XtZn_XoSviEQfcJbyljjIGwic8t49Wd78nsz0rhHdCEPnM2FVcz5kWZZTIigqINEgy7awTKTyia-fdr2iibNnERaJ9URzDdt7vYJMw",
-      "#becca3": "https://lh3.googleusercontent.com/aida-public/AB6AXuDOSHzQXRu_GGXBQoUPYZcdv3-zSs1PujeGtHFAclN4hV3g9yIw-8im4LPXTaIA4dhNPA_OvETbrQGziSWi0wEavyrqiKBgmNSyAAXrVNo8qb7UytlYhNVGfIf-P2_pP-e0zeMyFI66r6DAt0IjMbyo07sue79qHRZYOGqcvY8FKF5VkNGGY27t7QbgeBdRnvdAFY08_NvFGj1PZYgJx96QIGzr_OtxINeFMPjT8FlN2QIMGLDtUwJ0vlnSh2pP0p0vYYJZKpGKsHY"
+      "#5A7A87": "https://i.pinimg.com/1200x/30/bd/57/30bd57f54f052cab83efc80b585782ef.jpg",
+      "#66001A": "https://i.pinimg.com/1200x/46/1d/ad/461dad5475f6022d0a58e99cefcf4cd3.jpg",
+      "#F4C2C2": "https://i.pinimg.com/1200x/63/9f/df/639fdf73b5248702366d1bd993541de0.jpg"
     },
-    imageAlt: "Heathered tweed yarn in misty gray-green tone",
-    colors: ["#8b9a8f", "#7d525f", "#becca3"],
+    imageAlt: "Blue alpaca yarn skein in soft natural lighting",
+    colors: ["#5A7A87", "#66001A", "#F4C2C2"],
     activeColorIndex: 0,
     type: "thread",
-    filters: []
+    filters: ["Silk Blend"]
   },
   {
     id: 14,
@@ -231,15 +231,16 @@ const products = [
     price: 26.00,
     badge: null,
     description: "Deep navy bamboo-cotton blend with subtle sheen. Elegant drape for shawls.",
-    images: {
-      "#1a2a3a": "https://lh3.googleusercontent.com/aida-public/AB6AXuDOSHzQXRu_GGXBQoUPYZcdv3-zSs1PujeGtHFAclN4hV3g9yIw-8im4LPXTaIA4dhNPA_OvETbrQGziSWi0wEavyrqiKBgmNSyAAXrVNo8qb7UytlYhNVGfIf-P2_pP-e0zeMyFI66r6DAt0IjMbyo07sue79qHRZYOGqcvY8FKF5VkNGGY27t7QbgeBdRnvdAFY08_NvFGj1PZYgJx96QIGzr_OtxINeFMPjT8FlN2QIMGLDtUwJ0vlnSh2pP0p0vYYJZKpGKsHY",
-      "#eeb8c7": "https://lh3.googleusercontent.com/aida-public/AB6AXuDWIwTk9Opydkr90EFRzQG8UteOWGqdJ4Yk9IivrCtlNfl8j9_0d_-lCewtleBJIXWsQ3a-Sq_b7UnljK2V_swLkNHOjbza1_4Xj-ag1UR6p6toOLEteiXaHHnrk3tCBTETIEXeiyhJDh_rhSZDdQn5Z776Bz_lQBZlVeEW-XtZn_XoSviEQfcJbyljjIGwic8t49Wd78nsz0rhHdCEPnM2FVcz5kWZZTIigqINEgy7awTKTyia-fdr2iibNnERaJ9URzDdt7vYJMw",
-      "#fbf9f4": "https://lh3.googleusercontent.com/aida-public/AB6AXuDm1kJlYjbAq7sRAzFaylsLIT9FmKiv7xboIc0ftU-4D4TEM6iEWZ5RQuODdKRdbcFDg_ckj3c5AAr6lic6a4eCx6KeOkGsMAbOVsl_mEd_ZD9oII9AVqplRAjkHEiKHG_BMvV5MunlRS8BDTN5ioqJ3mAmANupGNqASRHNMXABEQ1WFWuy3Stp8PyogZuHdDS8KMkXvz7BKnmz2qybS9qd_QW8qoCCih-u-34tQcT8LLc-G0nQUAb3pSY_5eacXWCOcnZRlhWNRBs"
+
+        images: {
+      "#1C2A44": "https://i.pinimg.com/1200x/25/cc/e7/25cce7f1b6083c11ac38d00af5b78a9c.jpg",
+      "#CBAED1": "https://i.pinimg.com/736x/d6/83/49/d6834925b9c2b7964fc84e71ccbc5e80.jpg",
+      "#A9A9A9": "https://i.pinimg.com/736x/92/93/df/9293df0be9c42c1ff7117b8fb252d97f.jpg"
     },
-    imageAlt: "Navy blue yarn with subtle metallic sheen",
-    colors: ["#1a2a3a", "#eeb8c7", "#fbf9f4"],
+    imageAlt: "Bright yellow yarn skein on rustic wooden table",
+    colors: ["#1C2A44", "#CBAED1", "#A9A9A9"],
     activeColorIndex: 0,
     type: "thread",
-    filters: ["Silk Blend"]
+    filters: ["Cotton", "Organic"]
   }
 ];
