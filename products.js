@@ -6,7 +6,12 @@ const products = [
     price: 18.00,
     badge: { text: "New Arrival", position: "left", color: "primary" },
     description: "Ultra-soft GOTS certified organic cotton thread with a natural satin sheen.",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDWIwTk9Opydkr90EFRzQG8UteOWGqdJ4Yk9IivrCtlNfl8j9_0d_-lCewtleBJIXWsQ3a-Sq_b7UnljK2V_swLkNHOjbza1_4Xj-ag1UR6p6toOLEteiXaHHnrk3tCBTETIEXeiyhJDh_rhSZDdQn5Z776Bz_lQBZlVeEW-XtZn_XoSviEQfcJbyljjIGwic8t49Wd78nsz0rhHdCEPnM2FVcz5kWZZTIigqINEgy7awTKTyia-fdr2iibNnERaJ9URzDdt7vYJMw",
+    images: {
+      "#8a4b2a": "https://lh3.googleusercontent.com/aida-public/AB6AXuDWIwTk9Opydkr90EFRzQG8UteOWGqdJ4Yk9IivrCtlNfl8j9_0d_-lCewtleBJIXWsQ3a-Sq_b7UnljK2V_swLkNHOjbza1_4Xj-ag1UR6p6toOLEteiXaHHnrk3tCBTETIEXeiyhJDh_rhSZDdQn5Z776Bz_lQBZlVeEW-XtZn_XoSviEQfcJbyljjIGwic8t49Wd78nsz0rhHdCEPnM2FVcz5kWZZTIigqINEgy7awTKTyia-fdr2iibNnERaJ9URzDdt7vYJMw",
+      "#7d525f": "https://lh3.googleusercontent.com/aida-public/AB6AXuDOSHzQXRu_GGXBQoUPYZcdv3-zSs1PujeGtHFAclN4hV3g9yIw-8im4LPXTaIA4dhNPA_OvETbrQGziSWi0wEavyrqiKBgmNSyAAXrVNo8qb7UytlYhNVGfIf-P2_pP-e0zeMyFI66r6DAt0IjMbyo07sue79qHRZYOGqcvY8FKF5VkNGGY27t7QbgeBdRnvdAFY08_NvFGj1PZYgJx96QIGzr_OtxINeFMPjT8FlN2QIMGLDtUwJ0vlnSh2pP0p0vYYJZKpGKsHY",
+      "#54603f": "https://lh3.googleusercontent.com/aida-public/AB6AXuDm1kJlYjbAq7sRAzFaylsLIT9FmKiv7xboIc0ftU-4D4TEM6iEWZ5RQuODdKRdbcFDg_ckj3c5AAr6lic6a4eCx6KeOkGsMAbOVsl_mEd_ZD9oII9AVqplRAjkHEiKHG_BMvV5MunlRS8BDTN5ioqJ3mAmANupGNqASRHNMXABEQ1WFWuy3Stp8PyogZuHdDS8KMkXvz7BKnmz2qybS9qd_QW8qoCCih-u-34tQcT8LLc-G0nQUAb3pSY_5eacXWCOcnZRlhWNRBs",
+      "#becca3": "https://lh3.googleusercontent.com/aida-public/AB6AXuA-T7t8i1OThvPfKKamwYylNXZX6s80A6IJkwp0UfR2mZTeMy-KgQE2YDfpnoF6NmV_kSzo1RJ1cIL36Z0eZOh5ek6w66Kax-eARBowqk7c6Gr5OjHTwDLqtRtMVn_Et23xr4sVP8OE2r1suhvBrNFI8JrWiVAy4yrtPPASHTtjvv5rnwBOnBNO9RbhJsN6XtITT-V5E9YvlIaChdkMWcO79YUv5dZ9Vfp5TKxk0aZp9424LZlERpDSxkPu1mF9Dr0PejFHHRTWvZY"
+    },
     imageAlt: "Terracotta-colored crochet thread spool with organic cotton fibers",
     colors: ["#8a4b2a", "#7d525f", "#54603f", "#becca3"],
     activeColorIndex: 0,
@@ -34,7 +39,11 @@ const products = [
     price: 24.00,
     badge: null,
     description: "Luxe 20% silk, 80% bamboo blend. Perfect for delicate shawls and accessories.",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDOSHzQXRu_GGXBQoUPYZcdv3-zSs1PujeGtHFAclN4hV3g9yIw-8im4LPXTaIA4dhNPA_OvETbrQGziSWi0wEavyrqiKBgmNSyAAXrVNo8qb7UytlYhNVGfIf-P2_pP-e0zeMyFI66r6DAt0IjMbyo07sue79qHRZYOGqcvY8FKF5VkNGGY27t7QbgeBdRnvdAFY08_NvFGj1PZYgJx96QIGzr_OtxINeFMPjT8FlN2QIMGLDtUwJ0vlnSh2pP0p0vYYJZKpGKsHY",
+    images: {
+      "#eeb8c7": "https://lh3.googleusercontent.com/aida-public/AB6AXuDOSHzQXRu_GGXBQoUPYZcdv3-zSs1PujeGtHFAclN4hV3g9yIw-8im4LPXTaIA4dhNPA_OvETbrQGziSWi0wEavyrqiKBgmNSyAAXrVNo8qb7UytlYhNVGfIf-P2_pP-e0zeMyFI66r6DAt0IjMbyo07sue79qHRZYOGqcvY8FKF5VkNGGY27t7QbgeBdRnvdAFY08_NvFGj1PZYgJx96QIGzr_OtxINeFMPjT8FlN2QIMGLDtUwJ0vlnSh2pP0p0vYYJZKpGKsHY",
+      "#fbf9f4": "https://lh3.googleusercontent.com/aida-public/AB6AXuDWIwTk9Opydkr90EFRzQG8UteOWGqdJ4Yk9IivrCtlNfl8j9_0d_-lCewtleBJIXWsQ3a-Sq_b7UnljK2V_swLkNHOjbza1_4Xj-ag1UR6p6toOLEteiXaHHnrk3tCBTETIEXeiyhJDh_rhSZDdQn5Z776Bz_lQBZlVeEW-XtZn_XoSviEQfcJbyljjIGwic8t49Wd78nsz0rhHdCEPnM2FVcz5kWZZTIigqINEgy7awTKTyia-fdr2iibNnERaJ9URzDdt7vYJMw",
+      "#7d525f": "https://lh3.googleusercontent.com/aida-public/AB6AXuDm1kJlYjbAq7sRAzFaylsLIT9FmKiv7xboIc0ftU-4D4TEM6iEWZ5RQuODdKRdbcFDg_ckj3c5AAr6lic6a4eCx6KeOkGsMAbOVsl_mEd_ZD9oII9AVqplRAjkHEiKHG_BMvV5MunlRS8BDTN5ioqJ3mAmANupGNqASRHNMXABEQ1WFWuy3Stp8PyogZuHdDS8KMkXvz7BKnmz2qybS9qd_QW8qoCCih-u-34tQcT8LLc-G0nQUAb3pSY_5eacXWCOcnZRlhWNRBs"
+    },
     imageAlt: "Dusty rose and mauve silk blend crochet threads on wooden table",
     colors: ["#eeb8c7", "#fbf9f4", "#7d525f"],
     activeColorIndex: 0,
@@ -62,7 +71,10 @@ const products = [
     price: 16.50,
     badge: null,
     description: "Crisp, cool linen and cotton mix. Excellent stitch definition for summer patterns.",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDm1kJlYjbAq7sRAzFaylsLIT9FmKiv7xboIc0ftU-4D4TEM6iEWZ5RQuODdKRdbcFDg_ckj3c5AAr6lic6a4eCx6KeOkGsMAbOVsl_mEd_ZD9oII9AVqplRAjkHEiKHG_BMvV5MunlRS8BDTN5ioqJ3mAmANupGNqASRHNMXABEQ1WFWuy3Stp8PyogZuHdDS8KMkXvz7BKnmz2qybS9qd_QW8qoCCih-u-34tQcT8LLc-G0nQUAb3pSY_5eacXWCOcnZRlhWNRBs",
+    images: {
+      "#dae8be": "https://lh3.googleusercontent.com/aida-public/AB6AXuDm1kJlYjbAq7sRAzFaylsLIT9FmKiv7xboIc0ftU-4D4TEM6iEWZ5RQuODdKRdbcFDg_ckj3c5AAr6lic6a4eCx6KeOkGsMAbOVsl_mEd_ZD9oII9AVqplRAjkHEiKHG_BMvV5MunlRS8BDTN5ioqJ3mAmANupGNqASRHNMXABEQ1WFWuy3Stp8PyogZuHdDS8KMkXvz7BKnmz2qybS9qd_QW8qoCCih-u-34tQcT8LLc-G0nQUAb3pSY_5eacXWCOcnZRlhWNRBs",
+      "#becca3": "https://lh3.googleusercontent.com/aida-public/AB6AXuDWIwTk9Opydkr90EFRzQG8UteOWGqdJ4Yk9IivrCtlNfl8j9_0d_-lCewtleBJIXWsQ3a-Sq_b7UnljK2V_swLkNHOjbza1_4Xj-ag1UR6p6toOLEteiXaHHnrk3tCBTETIEXeiyhJDh_rhSZDdQn5Z776Bz_lQBZlVeEW-XtZn_XoSviEQfcJbyljjIGwic8t49Wd78nsz0rhHdCEPnM2FVcz5kWZZTIigqINEgy7awTKTyia-fdr2iibNnERaJ9URzDdt7vYJMw"
+    },
     imageAlt: "Skeins of natural undyed wool yarn in woven basket in sunny studio",
     colors: ["#dae8be", "#becca3"],
     activeColorIndex: 0,
@@ -90,7 +102,11 @@ const products = [
     price: 19.50,
     badge: { text: "Limited Edition", position: "left", color: "secondary" },
     description: "Deep plum cotton thread with a velvety finish. Perfect for winter accessories and amigurumi.",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDWIwTk9Opydkr90EFRzQG8UteOWGqdJ4Yk9IivrCtlNfl8j9_0d_-lCewtleBJIXWsQ3a-Sq_b7UnljK2V_swLkNHOjbza1_4Xj-ag1UR6p6toOLEteiXaHHnrk3tCBTETIEXeiyhJDh_rhSZDdQn5Z776Bz_lQBZlVeEW-XtZn_XoSviEQfcJbyljjIGwic8t49Wd78nsz0rhHdCEPnM2FVcz5kWZZTIigqINEgy7awTKTyia-fdr2iibNnERaJ9URzDdt7vYJMw",
+    images: {
+      "#5e2b3a": "https://lh3.googleusercontent.com/aida-public/AB6AXuDWIwTk9Opydkr90EFRzQG8UteOWGqdJ4Yk9IivrCtlNfl8j9_0d_-lCewtleBJIXWsQ3a-Sq_b7UnljK2V_swLkNHOjbza1_4Xj-ag1UR6p6toOLEteiXaHHnrk3tCBTETIEXeiyhJDh_rhSZDdQn5Z776Bz_lQBZlVeEW-XtZn_XoSviEQfcJbyljjIGwic8t49Wd78nsz0rhHdCEPnM2FVcz5kWZZTIigqINEgy7awTKTyia-fdr2iibNnERaJ9URzDdt7vYJMw",
+      "#8a4b2a": "https://lh3.googleusercontent.com/aida-public/AB6AXuDOSHzQXRu_GGXBQoUPYZcdv3-zSs1PujeGtHFAclN4hV3g9yIw-8im4LPXTaIA4dhNPA_OvETbrQGziSWi0wEavyrqiKBgmNSyAAXrVNo8qb7UytlYhNVGfIf-P2_pP-e0zeMyFI66r6DAt0IjMbyo07sue79qHRZYOGqcvY8FKF5VkNGGY27t7QbgeBdRnvdAFY08_NvFGj1PZYgJx96QIGzr_OtxINeFMPjT8FlN2QIMGLDtUwJ0vlnSh2pP0p0vYYJZKpGKsHY",
+      "#7d525f": "https://lh3.googleusercontent.com/aida-public/AB6AXuDm1kJlYjbAq7sRAzFaylsLIT9FmKiv7xboIc0ftU-4D4TEM6iEWZ5RQuODdKRdbcFDg_ckj3c5AAr6lic6a4eCx6KeOkGsMAbOVsl_mEd_ZD9oII9AVqplRAjkHEiKHG_BMvV5MunlRS8BDTN5ioqJ3mAmANupGNqASRHNMXABEQ1WFWuy3Stp8PyogZuHdDS8KMkXvz7BKnmz2qybS9qd_QW8qoCCih-u-34tQcT8LLc-G0nQUAb3pSY_5eacXWCOcnZRlhWNRBs"
+    },
     imageAlt: "Plum-colored cotton thread spool on natural wood",
     colors: ["#5e2b3a", "#8a4b2a", "#7d525f"],
     activeColorIndex: 0,
@@ -118,7 +134,11 @@ const products = [
     price: 28.00,
     badge: { text: "Premium", position: "right", color: "primary" },
     description: "Baby alpaca and silk blend. Incredibly soft with a subtle halo effect.",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDOSHzQXRu_GGXBQoUPYZcdv3-zSs1PujeGtHFAclN4hV3g9yIw-8im4LPXTaIA4dhNPA_OvETbrQGziSWi0wEavyrqiKBgmNSyAAXrVNo8qb7UytlYhNVGfIf-P2_pP-e0zeMyFI66r6DAt0IjMbyo07sue79qHRZYOGqcvY8FKF5VkNGGY27t7QbgeBdRnvdAFY08_NvFGj1PZYgJx96QIGzr_OtxINeFMPjT8FlN2QIMGLDtUwJ0vlnSh2pP0p0vYYJZKpGKsHY",
+    images: {
+      "#6b8e9c": "https://lh3.googleusercontent.com/aida-public/AB6AXuDOSHzQXRu_GGXBQoUPYZcdv3-zSs1PujeGtHFAclN4hV3g9yIw-8im4LPXTaIA4dhNPA_OvETbrQGziSWi0wEavyrqiKBgmNSyAAXrVNo8qb7UytlYhNVGfIf-P2_pP-e0zeMyFI66r6DAt0IjMbyo07sue79qHRZYOGqcvY8FKF5VkNGGY27t7QbgeBdRnvdAFY08_NvFGj1PZYgJx96QIGzr_OtxINeFMPjT8FlN2QIMGLDtUwJ0vlnSh2pP0p0vYYJZKpGKsHY",
+      "#eeb8c7": "https://lh3.googleusercontent.com/aida-public/AB6AXuDWIwTk9Opydkr90EFRzQG8UteOWGqdJ4Yk9IivrCtlNfl8j9_0d_-lCewtleBJIXWsQ3a-Sq_b7UnljK2V_swLkNHOjbza1_4Xj-ag1UR6p6toOLEteiXaHHnrk3tCBTETIEXeiyhJDh_rhSZDdQn5Z776Bz_lQBZlVeEW-XtZn_XoSviEQfcJbyljjIGwic8t49Wd78nsz0rhHdCEPnM2FVcz5kWZZTIigqINEgy7awTKTyia-fdr2iibNnERaJ9URzDdt7vYJMw",
+      "#fbf9f4": "https://lh3.googleusercontent.com/aida-public/AB6AXuDm1kJlYjbAq7sRAzFaylsLIT9FmKiv7xboIc0ftU-4D4TEM6iEWZ5RQuODdKRdbcFDg_ckj3c5AAr6lic6a4eCx6KeOkGsMAbOVsl_mEd_ZD9oII9AVqplRAjkHEiKHG_BMvV5MunlRS8BDTN5ioqJ3mAmANupGNqASRHNMXABEQ1WFWuy3Stp8PyogZuHdDS8KMkXvz7BKnmz2qybS9qd_QW8qoCCih-u-34tQcT8LLc-G0nQUAb3pSY_5eacXWCOcnZRlhWNRBs"
+    },
     imageAlt: "Blue alpaca yarn skein in soft natural lighting",
     colors: ["#6b8e9c", "#eeb8c7", "#fbf9f4"],
     activeColorIndex: 0,
@@ -146,7 +166,11 @@ const products = [
     price: 17.00,
     badge: null,
     description: "Vibrant golden yellow organic cotton. Colorfast and perfect for heirloom projects.",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDm1kJlYjbAq7sRAzFaylsLIT9FmKiv7xboIc0ftU-4D4TEM6iEWZ5RQuODdKRdbcFDg_ckj3c5AAr6lic6a4eCx6KeOkGsMAbOVsl_mEd_ZD9oII9AVqplRAjkHEiKHG_BMvV5MunlRS8BDTN5ioqJ3mAmANupGNqASRHNMXABEQ1WFWuy3Stp8PyogZuHdDS8KMkXvz7BKnmz2qybS9qd_QW8qoCCih-u-34tQcT8LLc-G0nQUAb3pSY_5eacXWCOcnZRlhWNRBs",
+    images: {
+      "#e0a33e": "https://lh3.googleusercontent.com/aida-public/AB6AXuDm1kJlYjbAq7sRAzFaylsLIT9FmKiv7xboIc0ftU-4D4TEM6iEWZ5RQuODdKRdbcFDg_ckj3c5AAr6lic6a4eCx6KeOkGsMAbOVsl_mEd_ZD9oII9AVqplRAjkHEiKHG_BMvV5MunlRS8BDTN5ioqJ3mAmANupGNqASRHNMXABEQ1WFWuy3Stp8PyogZuHdDS8KMkXvz7BKnmz2qybS9qd_QW8qoCCih-u-34tQcT8LLc-G0nQUAb3pSY_5eacXWCOcnZRlhWNRBs",
+      "#8a4b2a": "https://lh3.googleusercontent.com/aida-public/AB6AXuDWIwTk9Opydkr90EFRzQG8UteOWGqdJ4Yk9IivrCtlNfl8j9_0d_-lCewtleBJIXWsQ3a-Sq_b7UnljK2V_swLkNHOjbza1_4Xj-ag1UR6p6toOLEteiXaHHnrk3tCBTETIEXeiyhJDh_rhSZDdQn5Z776Bz_lQBZlVeEW-XtZn_XoSviEQfcJbyljjIGwic8t49Wd78nsz0rhHdCEPnM2FVcz5kWZZTIigqINEgy7awTKTyia-fdr2iibNnERaJ9URzDdt7vYJMw",
+      "#becca3": "https://lh3.googleusercontent.com/aida-public/AB6AXuDOSHzQXRu_GGXBQoUPYZcdv3-zSs1PujeGtHFAclN4hV3g9yIw-8im4LPXTaIA4dhNPA_OvETbrQGziSWi0wEavyrqiKBgmNSyAAXrVNo8qb7UytlYhNVGfIf-P2_pP-e0zeMyFI66r6DAt0IjMbyo07sue79qHRZYOGqcvY8FKF5VkNGGY27t7QbgeBdRnvdAFY08_NvFGj1PZYgJx96QIGzr_OtxINeFMPjT8FlN2QIMGLDtUwJ0vlnSh2pP0p0vYYJZKpGKsHY"
+    },
     imageAlt: "Bright yellow yarn skein on rustic wooden table",
     colors: ["#e0a33e", "#8a4b2a", "#becca3"],
     activeColorIndex: 0,
@@ -174,7 +198,11 @@ const products = [
     price: 21.50,
     badge: { text: "New Arrival", position: "left", color: "primary" },
     description: "Soft wool blend with tweed flecks. Perfect for cozy winter garments and accessories.",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDWIwTk9Opydkr90EFRzQG8UteOWGqdJ4Yk9IivrCtlNfl8j9_0d_-lCewtleBJIXWsQ3a-Sq_b7UnljK2V_swLkNHOjbza1_4Xj-ag1UR6p6toOLEteiXaHHnrk3tCBTETIEXeiyhJDh_rhSZDdQn5Z776Bz_lQBZlVeEW-XtZn_XoSviEQfcJbyljjIGwic8t49Wd78nsz0rhHdCEPnM2FVcz5kWZZTIigqINEgy7awTKTyia-fdr2iibNnERaJ9URzDdt7vYJMw",
+    images: {
+      "#8b9a8f": "https://lh3.googleusercontent.com/aida-public/AB6AXuDm1kJlYjbAq7sRAzFaylsLIT9FmKiv7xboIc0ftU-4D4TEM6iEWZ5RQuODdKRdbcFDg_ckj3c5AAr6lic6a4eCx6KeOkGsMAbOVsl_mEd_ZD9oII9AVqplRAjkHEiKHG_BMvV5MunlRS8BDTN5ioqJ3mAmANupGNqASRHNMXABEQ1WFWuy3Stp8PyogZuHdDS8KMkXvz7BKnmz2qybS9qd_QW8qoCCih-u-34tQcT8LLc-G0nQUAb3pSY_5eacXWCOcnZRlhWNRBs",
+      "#7d525f": "https://lh3.googleusercontent.com/aida-public/AB6AXuDWIwTk9Opydkr90EFRzQG8UteOWGqdJ4Yk9IivrCtlNfl8j9_0d_-lCewtleBJIXWsQ3a-Sq_b7UnljK2V_swLkNHOjbza1_4Xj-ag1UR6p6toOLEteiXaHHnrk3tCBTETIEXeiyhJDh_rhSZDdQn5Z776Bz_lQBZlVeEW-XtZn_XoSviEQfcJbyljjIGwic8t49Wd78nsz0rhHdCEPnM2FVcz5kWZZTIigqINEgy7awTKTyia-fdr2iibNnERaJ9URzDdt7vYJMw",
+      "#becca3": "https://lh3.googleusercontent.com/aida-public/AB6AXuDOSHzQXRu_GGXBQoUPYZcdv3-zSs1PujeGtHFAclN4hV3g9yIw-8im4LPXTaIA4dhNPA_OvETbrQGziSWi0wEavyrqiKBgmNSyAAXrVNo8qb7UytlYhNVGfIf-P2_pP-e0zeMyFI66r6DAt0IjMbyo07sue79qHRZYOGqcvY8FKF5VkNGGY27t7QbgeBdRnvdAFY08_NvFGj1PZYgJx96QIGzr_OtxINeFMPjT8FlN2QIMGLDtUwJ0vlnSh2pP0p0vYYJZKpGKsHY"
+    },
     imageAlt: "Heathered tweed yarn in misty gray-green tone",
     colors: ["#8b9a8f", "#7d525f", "#becca3"],
     activeColorIndex: 0,
@@ -202,7 +230,11 @@ const products = [
     price: 26.00,
     badge: null,
     description: "Deep navy bamboo-cotton blend with subtle sheen. Elegant drape for shawls.",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDOSHzQXRu_GGXBQoUPYZcdv3-zSs1PujeGtHFAclN4hV3g9yIw-8im4LPXTaIA4dhNPA_OvETbrQGziSWi0wEavyrqiKBgmNSyAAXrVNo8qb7UytlYhNVGfIf-P2_pP-e0zeMyFI66r6DAt0IjMbyo07sue79qHRZYOGqcvY8FKF5VkNGGY27t7QbgeBdRnvdAFY08_NvFGj1PZYgJx96QIGzr_OtxINeFMPjT8FlN2QIMGLDtUwJ0vlnSh2pP0p0vYYJZKpGKsHY",
+    images: {
+      "#1a2a3a": "https://lh3.googleusercontent.com/aida-public/AB6AXuDOSHzQXRu_GGXBQoUPYZcdv3-zSs1PujeGtHFAclN4hV3g9yIw-8im4LPXTaIA4dhNPA_OvETbrQGziSWi0wEavyrqiKBgmNSyAAXrVNo8qb7UytlYhNVGfIf-P2_pP-e0zeMyFI66r6DAt0IjMbyo07sue79qHRZYOGqcvY8FKF5VkNGGY27t7QbgeBdRnvdAFY08_NvFGj1PZYgJx96QIGzr_OtxINeFMPjT8FlN2QIMGLDtUwJ0vlnSh2pP0p0vYYJZKpGKsHY",
+      "#eeb8c7": "https://lh3.googleusercontent.com/aida-public/AB6AXuDWIwTk9Opydkr90EFRzQG8UteOWGqdJ4Yk9IivrCtlNfl8j9_0d_-lCewtleBJIXWsQ3a-Sq_b7UnljK2V_swLkNHOjbza1_4Xj-ag1UR6p6toOLEteiXaHHnrk3tCBTETIEXeiyhJDh_rhSZDdQn5Z776Bz_lQBZlVeEW-XtZn_XoSviEQfcJbyljjIGwic8t49Wd78nsz0rhHdCEPnM2FVcz5kWZZTIigqINEgy7awTKTyia-fdr2iibNnERaJ9URzDdt7vYJMw",
+      "#fbf9f4": "https://lh3.googleusercontent.com/aida-public/AB6AXuDm1kJlYjbAq7sRAzFaylsLIT9FmKiv7xboIc0ftU-4D4TEM6iEWZ5RQuODdKRdbcFDg_ckj3c5AAr6lic6a4eCx6KeOkGsMAbOVsl_mEd_ZD9oII9AVqplRAjkHEiKHG_BMvV5MunlRS8BDTN5ioqJ3mAmANupGNqASRHNMXABEQ1WFWuy3Stp8PyogZuHdDS8KMkXvz7BKnmz2qybS9qd_QW8qoCCih-u-34tQcT8LLc-G0nQUAb3pSY_5eacXWCOcnZRlhWNRBs"
+    },
     imageAlt: "Navy blue yarn with subtle metallic sheen",
     colors: ["#1a2a3a", "#eeb8c7", "#fbf9f4"],
     activeColorIndex: 0,

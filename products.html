@@ -167,10 +167,14 @@
   let activeTag = null;
   let quantities = {};   // { productId: count }
   let currentPage = 1;
+  let productColorIndices = {}; // Track selected color index for each product
   const productsPerPage = 6;
 
-  // Initialise quantities
-  products.forEach(p => quantities[p.id] = 1);
+  // Initialise quantities and color indices
+  products.forEach(p => {
+    quantities[p.id] = 1;
+    productColorIndices[p.id] = p.activeColorIndex || 0;
+  });
 
   // ── Filter & Sort Logic ────────────────────────────────────
   function getFilteredAndSortedProducts() {
@@ -247,6 +251,33 @@
     document.getElementById('product-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
+  // ── Color Switching ────────────────────────────────────────
+  function changeColor(productId, colorIndex, colorValue) {
+    productColorIndices[productId] = colorIndex;
+    
+    // Update the image source
+    const product = products.find(p => p.id === productId);
+    if (product && product.images) {
+      const imgElement = document.getElementById(`product-img-${productId}`);
+      if (imgElement && product.images[colorValue]) {
+        imgElement.src = product.images[colorValue];
+      }
+    }
+    
+    // Update the ring styles on color swatches
+    const swatchContainer = document.getElementById(`swatches-${productId}`);
+    if (swatchContainer) {
+      const swatches = swatchContainer.querySelectorAll('.color-swatch');
+      swatches.forEach((swatch, idx) => {
+        if (idx === colorIndex) {
+          swatch.classList.add('ring-2', 'ring-primary', 'ring-offset-2');
+        } else {
+          swatch.classList.remove('ring-2', 'ring-primary', 'ring-offset-2');
+        }
+      });
+    }
+  }
+
   // ── Render ─────────────────────────────────────────────────
   function renderProducts() {
     const filtered = getFilteredAndSortedProducts();
@@ -275,14 +306,37 @@
       badgeHtml = `<span class="absolute top-4 ${p.badge.position === 'right' ? 'right-4' : 'left-4'} text-white font-label-sm text-label-sm px-3 py-1 rounded-full" style="background-color: ${bgColor}">${p.badge.text}</span>`;
     }
 
+    // Get current image based on selected color
+    let currentImage = p.image || '';
+    let currentColorIndex = productColorIndices[p.id] || 0;
+    
+    if (p.images && p.colors && p.colors[currentColorIndex]) {
+      const currentColor = p.colors[currentColorIndex];
+      currentImage = p.images[currentColor] || p.image || '';
+    } else if (p.images && p.colors) {
+      // Fallback to first color
+      currentImage = p.images[p.colors[0]] || p.image || '';
+    }
+
     // Color swatches (threads) or size badge (needles)
     let bottomDetail = '';
-    if (p.colors) {
+    if (p.colors && p.images) {
       const swatches = p.colors.map((c, i) => {
-        const isActive = i === (p.activeColorIndex ?? 0);
-        return `<div class="w-6 h-6 rounded-full ${isActive ? 'ring-2 ring-primary ring-offset-2' : 'hover:scale-110'} transition-transform cursor-pointer" style="background-color:${c}; ${c === '#fbf9f4' ? 'border:1px solid #d8c2b9;' : ''}"></div>`;
+        const isActive = i === currentColorIndex;
+        const borderStyle = c === '#fbf9f4' ? 'border:1px solid #d8c2b9;' : '';
+        return `
+          <div 
+            class="color-swatch w-8 h-8 rounded-full cursor-pointer transition-transform hover:scale-110 ${isActive ? 'ring-2 ring-primary ring-offset-2' : ''}"
+            style="background-color: ${c}; ${borderStyle}"
+            onclick="changeColor(${p.id}, ${i}, '${c}')"
+          ></div>
+        `;
       }).join('');
-      bottomDetail = `<div class="flex gap-2 mb-6">${swatches}</div>`;
+      bottomDetail = `
+        <div id="swatches-${p.id}" class="flex gap-2 mb-6">
+          ${swatches}
+        </div>
+      `;
     } else if (p.size) {
       bottomDetail = `<div class="mb-3"><span class="font-label-md text-label-md text-secondary bg-secondary-fixed px-2 py-0.5 rounded">Size: ${p.size}</span></div>`;
     }
@@ -290,7 +344,7 @@
     return `
       <div class="bg-white rounded-[24px] p-4 soft-shadow card-hover transition-all duration-300 flex flex-col border border-surface-container">
         <div class="relative rounded-[20px] overflow-hidden mb-4 aspect-[4/5] bg-surface-container-low">
-          <img class="w-full h-full object-cover" src="${p.image}" alt="${p.imageAlt}" loading="lazy"/>
+          <img id="product-img-${p.id}" class="w-full h-full object-cover transition-opacity duration-300" src="${currentImage}" alt="${p.imageAlt}" loading="lazy"/>
           ${badgeHtml}
         </div>
         <div class="px-2 flex-grow">
@@ -328,7 +382,10 @@
 
   function addToCart(id) {
     const product = products.find(p => p.id === id);
-    if (product) alert(`Added ${quantities[id]}× "${product.name}" to cart!`);
+    const selectedColorIndex = productColorIndices[id];
+    const selectedColor = product.colors ? product.colors[selectedColorIndex] : null;
+    const colorName = selectedColor ? ` (${selectedColor})` : '';
+    if (product) alert(`Added ${quantities[id]}× "${product.name}"${colorName} to cart!`);
   }
 
   function filterByCategory(cat) {
