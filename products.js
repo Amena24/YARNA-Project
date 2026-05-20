@@ -8,9 +8,9 @@ const products = [
     description: "Ultra-soft GOTS certified organic cotton thread with a natural satin sheen.",
     images: {
       "#8a4b2a": "https://lh3.googleusercontent.com/aida-public/AB6AXuDWIwTk9Opydkr90EFRzQG8UteOWGqdJ4Yk9IivrCtlNfl8j9_0d_-lCewtleBJIXWsQ3a-Sq_b7UnljK2V_swLkNHOjbza1_4Xj-ag1UR6p6toOLEteiXaHHnrk3tCBTETIEXeiyhJDh_rhSZDdQn5Z776Bz_lQBZlVeEW-XtZn_XoSviEQfcJbyljjIGwic8t49Wd78nsz0rhHdCEPnM2FVcz5kWZZTIigqINEgy7awTKTyia-fdr2iibNnERaJ9URzDdt7vYJMw",
-      "#7d525f": "https://lh3.googleusercontent.com/aida-public/AB6AXuDOSHzQXRu_GGXBQoUPYZcdv3-zSs1PujeGtHFAclN4hV3g9yIw-8im4LPXTaIA4dhNPA_OvETbrQGziSWi0wEavyrqiKBgmNSyAAXrVNo8qb7UytlYhNVGfIf-P2_pP-e0zeMyFI66r6DAt0IjMbyo07sue79qHRZYOGqcvY8FKF5VkNGGY27t7QbgeBdRnvdAFY08_NvFGj1PZYgJx96QIGzr_OtxINeFMPjT8FlN2QIMGLDtUwJ0vlnSh2pP0p0vYYJZKpGKsHY",
-      "#54603f": "https://lh3.googleusercontent.com/aida-public/AB6AXuDm1kJlYjbAq7sRAzFaylsLIT9FmKiv7xboIc0ftU-4D4TEM6iEWZ5RQuODdKRdbcFDg_ckj3c5AAr6lic6a4eCx6KeOkGsMAbOVsl_mEd_ZD9oII9AVqplRAjkHEiKHG_BMvV5MunlRS8BDTN5ioqJ3mAmANupGNqASRHNMXABEQ1WFWuy3Stp8PyogZuHdDS8KMkXvz7BKnmz2qybS9qd_QW8qoCCih-u-34tQcT8LLc-G0nQUAb3pSY_5eacXWCOcnZRlhWNRBs",
-      "#becca3": "https://lh3.googleusercontent.com/aida-public/AB6AXuA-T7t8i1OThvPfKKamwYylNXZX6s80A6IJkwp0UfR2mZTeMy-KgQE2YDfpnoF6NmV_kSzo1RJ1cIL36Z0eZOh5ek6w66Kax-eARBowqk7c6Gr5OjHTwDLqtRtMVn_Et23xr4sVP8OE2r1suhvBrNFI8JrWiVAy4yrtPPASHTtjvv5rnwBOnBNO9RbhJsN6XtITT-V5E9YvlIaChdkMWcO79YUv5dZ9Vfp5TKxk0aZp9424LZlERpDSxkPu1mF9Dr0PejFHHRTWvZY"
+      "#7d525f": "https://p16-cc-web-image-sign-sg.ibyteimg.com/tos-alisg-i-tnf8g33v4j-sg/26674a68cc5d46708522d7b6929c1653~tplv-tnf8g33v4j-ai-watermark-resize:1080:1080.image?rk3s=8880c87b&x-expires=1781852406&x-signature=1ng%2FVwP3uxhP2fQh%2BvyBIf8Lljg%3D",
+      "#54603f": "https://p16-cc-web-image-sign-sg.ibyteimg.com/tos-alisg-i-tnf8g33v4j-sg/18ef06f3d6d84cdb802a3ca561a43735~tplv-tnf8g33v4j-ai-watermark-resize:1080:1080.image?rk3s=8880c87b&x-expires=1781852659&x-signature=1qOmhT9O6vD0XRDxqOnefFGlD18%3D",
+      "#becca3": "https://p16-cc-web-image-sign-sg.ibyteimg.com/tos-alisg-i-tnf8g33v4j-sg/ebfac73bad214a50bc176a43f5e07314~tplv-tnf8g33v4j-ai-watermark-resize:1080:1080.image?rk3s=8880c87b&x-expires=1781853108&x-signature=uYknXIwxHj6IKR1qj1XWH1KETlo%3D"
     },
     imageAlt: "Terracotta-colored crochet thread spool with organic cotton fibers",
     colors: ["#8a4b2a", "#7d525f", "#54603f", "#becca3"],
@@ -41,8 +41,8 @@ const products = [
     description: "Luxe 20% silk, 80% bamboo blend. Perfect for delicate shawls and accessories.",
     images: {
       "#eeb8c7": "https://lh3.googleusercontent.com/aida-public/AB6AXuDOSHzQXRu_GGXBQoUPYZcdv3-zSs1PujeGtHFAclN4hV3g9yIw-8im4LPXTaIA4dhNPA_OvETbrQGziSWi0wEavyrqiKBgmNSyAAXrVNo8qb7UytlYhNVGfIf-P2_pP-e0zeMyFI66r6DAt0IjMbyo07sue79qHRZYOGqcvY8FKF5VkNGGY27t7QbgeBdRnvdAFY08_NvFGj1PZYgJx96QIGzr_OtxINeFMPjT8FlN2QIMGLDtUwJ0vlnSh2pP0p0vYYJZKpGKsHY",
-      "#fbf9f4": "https://lh3.googleusercontent.com/aida-public/AB6AXuDWIwTk9Opydkr90EFRzQG8UteOWGqdJ4Yk9IivrCtlNfl8j9_0d_-lCewtleBJIXWsQ3a-Sq_b7UnljK2V_swLkNHOjbza1_4Xj-ag1UR6p6toOLEteiXaHHnrk3tCBTETIEXeiyhJDh_rhSZDdQn5Z776Bz_lQBZlVeEW-XtZn_XoSviEQfcJbyljjIGwic8t49Wd78nsz0rhHdCEPnM2FVcz5kWZZTIigqINEgy7awTKTyia-fdr2iibNnERaJ9URzDdt7vYJMw",
-      "#7d525f": "https://lh3.googleusercontent.com/aida-public/AB6AXuDm1kJlYjbAq7sRAzFaylsLIT9FmKiv7xboIc0ftU-4D4TEM6iEWZ5RQuODdKRdbcFDg_ckj3c5AAr6lic6a4eCx6KeOkGsMAbOVsl_mEd_ZD9oII9AVqplRAjkHEiKHG_BMvV5MunlRS8BDTN5ioqJ3mAmANupGNqASRHNMXABEQ1WFWuy3Stp8PyogZuHdDS8KMkXvz7BKnmz2qybS9qd_QW8qoCCih-u-34tQcT8LLc-G0nQUAb3pSY_5eacXWCOcnZRlhWNRBs"
+      "#fbf9f4": "https://p16-cc-web-image-sign-sg.ibyteimg.com/tos-alisg-i-tnf8g33v4j-sg/cb630dcf94674f0eb3a45bc35120da6d~tplv-tnf8g33v4j-ai-watermark-resize:1080:1080.image?rk3s=8880c87b&x-expires=1781853445&x-signature=WQgkWh8VSVH15B%2BNimHTU6fdwWE%3D",
+      "#7d525f": "https://p19-cc-web-image-sign-sg.ibyteimg.com/tos-alisg-i-tnf8g33v4j-sg/3b8b01c6681d45d6b943de4fd7313c84~tplv-tnf8g33v4j-ai-watermark-resize:1080:1080.image?rk3s=8880c87b&x-expires=1781853557&x-signature=QZxCI4XL54%2FN1SYlsz7EHtAKwlY%3D"
     },
     imageAlt: "Dusty rose and mauve silk blend crochet threads on wooden table",
     colors: ["#eeb8c7", "#fbf9f4", "#7d525f"],
@@ -103,12 +103,13 @@ const products = [
     badge: { text: "Limited Edition", position: "left", color: "secondary" },
     description: "Deep plum cotton thread with a velvety finish. Perfect for winter accessories and amigurumi.",
     images: {
-      "#5e2b3a": "https://lh3.googleusercontent.com/aida-public/AB6AXuDWIwTk9Opydkr90EFRzQG8UteOWGqdJ4Yk9IivrCtlNfl8j9_0d_-lCewtleBJIXWsQ3a-Sq_b7UnljK2V_swLkNHOjbza1_4Xj-ag1UR6p6toOLEteiXaHHnrk3tCBTETIEXeiyhJDh_rhSZDdQn5Z776Bz_lQBZlVeEW-XtZn_XoSviEQfcJbyljjIGwic8t49Wd78nsz0rhHdCEPnM2FVcz5kWZZTIigqINEgy7awTKTyia-fdr2iibNnERaJ9URzDdt7vYJMw",
-      "#8a4b2a": "https://lh3.googleusercontent.com/aida-public/AB6AXuDOSHzQXRu_GGXBQoUPYZcdv3-zSs1PujeGtHFAclN4hV3g9yIw-8im4LPXTaIA4dhNPA_OvETbrQGziSWi0wEavyrqiKBgmNSyAAXrVNo8qb7UytlYhNVGfIf-P2_pP-e0zeMyFI66r6DAt0IjMbyo07sue79qHRZYOGqcvY8FKF5VkNGGY27t7QbgeBdRnvdAFY08_NvFGj1PZYgJx96QIGzr_OtxINeFMPjT8FlN2QIMGLDtUwJ0vlnSh2pP0p0vYYJZKpGKsHY",
-      "#7d525f": "https://lh3.googleusercontent.com/aida-public/AB6AXuDm1kJlYjbAq7sRAzFaylsLIT9FmKiv7xboIc0ftU-4D4TEM6iEWZ5RQuODdKRdbcFDg_ckj3c5AAr6lic6a4eCx6KeOkGsMAbOVsl_mEd_ZD9oII9AVqplRAjkHEiKHG_BMvV5MunlRS8BDTN5ioqJ3mAmANupGNqASRHNMXABEQ1WFWuy3Stp8PyogZuHdDS8KMkXvz7BKnmz2qybS9qd_QW8qoCCih-u-34tQcT8LLc-G0nQUAb3pSY_5eacXWCOcnZRlhWNRBs"
+      "#C8A6D1": "https://i.pinimg.com/1200x/f2/8b/68/f28b68eb5e08a4d615517c271667ee3d.jpg",
+      "#3AB29B": "https://i.pinimg.com/1200x/10/c0/ad/10c0adefe41aad8cea79ed7470fff91c.jpg",
+      "#D3D3D3": "https://i.pinimg.com/1200x/50/d7/36/50d736d1c0f7aa4a5efd2f9def41669c.jpg",
+      "#4B4B4B": "https://i.pinimg.com/1200x/8b/8c/79/8b8c790b4a97e4bd3bee5f53f2cace6a.jpg"
     },
     imageAlt: "Plum-colored cotton thread spool on natural wood",
-    colors: ["#5e2b3a", "#8a4b2a", "#7d525f"],
+    colors: ["#C8A6D1", "#3AB29B", "#D3D3D3", "#4B4B4B"],
     activeColorIndex: 0,
     type: "thread",
     filters: ["Cotton"]
